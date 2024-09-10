@@ -789,6 +789,8 @@ MonoBehaviour:
   agent: {fileID: 0}
   patrolRange: 10
   waitTime: 2
+  detectionRadius: 10
+  player: {fileID: 0}
 --- !u!195 &1214314573
 NavMeshAgent:
   m_ObjectHideFlags: 0

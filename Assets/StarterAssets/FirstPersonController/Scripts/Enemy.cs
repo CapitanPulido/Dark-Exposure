@@ -1,58 +1,80 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-
 public class Enemy : MonoBehaviour
 {
-    public NavMeshAgent agent;       // Referencia al componente NavMeshAgent
-    public float patrolRange = 10f;  // Rango dentro del cual se patrullará
-    public float waitTime = 2f;      // Tiempo de espera en cada punto
+    public NavMeshAgent agent;
+    public float patrolRange = 10f;   
+    public float waitTime = 2f;       
+    public float detectionRadius = 10f; 
+    public Transform player;          
 
-    private float waitTimer;         // Temporizador para el tiempo de espera
-
+    private float waitTimer;
+    private Vector3 lastDestination;
+    private bool isChasingPlayer = false; 
     void Start()
     {
         if (agent == null)
         {
             agent = GetComponent<NavMeshAgent>();
+            if (agent == null)
+            {
+                Debug.LogError("No se encontró el componente NavMeshAgent en el GameObject.");
+                return;
+            }
         }
 
-        if (agent != null)
-        {
-            MoveToRandomPoint();
-        }
+        waitTimer = waitTime;
+        lastDestination = transform.position; 
+        MoveToRandomPoint();
     }
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        
+        if (player != null && Vector3.Distance(transform.position, player.position) <= detectionRadius)
         {
-            if (waitTimer <= 0)
+            
+            isChasingPlayer = true;
+            agent.SetDestination(player.position);
+        }
+        else
+        {
+            
+            isChasingPlayer = false;
+
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
-                MoveToRandomPoint();
-                waitTimer = waitTime;
-            }
-            else
-            {
-                waitTimer -= Time.deltaTime;
+                if (waitTimer <= 0)
+                {
+                    MoveToRandomPoint();
+                    waitTimer = waitTime;
+                }
+                else
+                {
+                    waitTimer -= Time.deltaTime;
+                }
             }
         }
     }
 
     void MoveToRandomPoint()
     {
-        Vector3 randomPoint = transform.position + UnityEngine.Random.insideUnitSphere * patrolRange;
+        Vector3 randomPoint;
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, patrolRange, NavMesh.AllAreas))
+
+        do
         {
-            // Mueve el agente al punto aleatorio
-            agent.SetDestination(hit.position);
-        }
+            
+            randomPoint = transform.position + UnityEngine.Random.insideUnitSphere * patrolRange;
+            randomPoint.y = transform.position.y; 
+
+        } while (Vector3.Distance(randomPoint, lastDestination) < 10f ||
+                 !NavMesh.SamplePosition(randomPoint, out hit, patrolRange, NavMesh.AllAreas));
+
+        // Actualiza el destino del agente
+        agent.SetDestination(hit.position);
+        lastDestination = hit.position; 
     }
 }
-
-
