@@ -64,6 +64,9 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+		public Camera MainCamera, CameraVideo;
+		private bool boolCam;
+
 	
 #if ENABLE_INPUT_SYSTEM
 		private PlayerInput _playerInput;
@@ -115,11 +118,22 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			if (Input.GetKeyDown(KeyCode.C))
+			{
+				ChangeCamera();
+			}
 		}
 
 		private void LateUpdate()
 		{
 			CameraRotation();
+		}
+
+		private void ChangeCamera()
+		{
+			boolCam = !boolCam;
+			MainCamera.gameObject.SetActive(!boolCam);
+			CameraVideo.gameObject.SetActive(boolCam);
 		}
 
 		private void GroundedCheck()
