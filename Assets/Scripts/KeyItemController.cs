@@ -10,7 +10,7 @@ namespace KeySystem
         [SerializeField] private bool redDoor = false;
         [SerializeField] private bool redKey = false;
 
-        [SerializeField] private Keyinventori keyinventori = null;
+        [SerializeField] private Keyinventori _keyinventori = null;
 
         private KeyDoorController doorObject;
 
@@ -30,7 +30,7 @@ namespace KeySystem
             }
             else if (redKey) 
             {
-                Keyinventori.hasRedkey = true;
+                _keyinventori.hasRedkey = true;
                 gameObject.SetActive(false);
             }
         }
