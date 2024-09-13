@@ -44,7 +44,24 @@ namespace KeySystem
                     StartCoroutine(PauseDoorInteraction());
                 }
 
+                else if (doorOpen && !pauseInteraction)
+                {
+                    doorAnim.Play(openAnimationName, 0, 0.0f);
+                    doorOpen = false;
+                    StartCoroutine(PauseDoorInteraction());
+                }
             }
+            else
+            {
+                StartCoroutine(ShowDoorLockedUI());
+            }
+        }
+
+        IEnumerator ShowDoorLockedUI()
+        {
+            showDoorLockedUI.SetActive(true);
+            yield return new WaitForSeconds(timeToShowUI);
+            showDoorLockedUI.SetActive(false);
         }
     }
 }
