@@ -40,9 +40,10 @@ namespace KeySystem
                     isCrosshairActive = true;
                     doOnce = true;
 
-                    if (Input.GetKeyDown(openDoorKey))
+                    if (Input.GetKey(openDoorKey))
                     {
                         raycastedObject.ObjectInteraction();
+                        //raycastedObject.transform.rotation = new Quaternion(raycastedObject.transform.rotation.x, raycastedObject.transform.rotation.y - 90, raycastedObject.transform.rotation.z, 1);
                     }
                 }
             }
