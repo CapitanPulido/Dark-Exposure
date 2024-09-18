@@ -11,7 +11,15 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		[Header("Player")]
+        public float energiaActual;
+        public float energiaMaxima;
+        public float velocidaddeConsumo;
+
+        public bool Bateria = true;
+
+
+
+        [Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -118,11 +126,15 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			if (Input.GetKeyDown(KeyCode.C))
+			if (Input.GetKeyDown(KeyCode.Mouse1))
 			{
 				ChangeCamera();
 			}
-		}
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                ChangeCamera();
+            }
+        }
 
 		private void LateUpdate()
 		{
