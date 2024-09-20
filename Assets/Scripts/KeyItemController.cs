@@ -24,11 +24,6 @@ namespace KeySystem
 
         public void ObjectInteraction()
         {
-            if (redDoor)
-            {
-                doorObject.PlayAnimation();
-            }
-            else if (redKey) 
             {
                 _keyinventori.hasRedkey = true;
                 gameObject.SetActive(false);
