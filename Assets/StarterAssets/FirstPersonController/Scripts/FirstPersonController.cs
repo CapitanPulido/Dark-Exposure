@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 #endif
 
 namespace StarterAssets
@@ -13,9 +14,13 @@ namespace StarterAssets
 	{
         public float energiaActual;
         public float energiaMaxima;
+		private float energiaMinima = 0;
         public float velocidaddeConsumo;
 
         public bool Bateria = true;
+		public Canvas camara;
+		public Slider bateria;
+		public bool ConBateria = true;
 
 
 
@@ -104,7 +109,8 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
-		}
+            camara.gameObject.SetActive(false);
+        }
 
 		private void Start()
 		{
@@ -119,7 +125,12 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
+
+			bateria.maxValue = energiaMaxima;
+			bateria.minValue = Mathf.Clamp01(energiaMinima);
+			energiaActual = energiaMaxima;
+            
+        }
 
 		private void Update()
 		{
@@ -128,12 +139,29 @@ namespace StarterAssets
 			Move();
 			if (Input.GetKeyDown(KeyCode.Mouse1))
 			{
-				ChangeCamera();
-			}
+				Invoke("ChangeCamera", 1);
+                
+            }
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
                 ChangeCamera();
+		
             }
+            if (boolCam)
+            {
+                energiaActual -= Time.deltaTime * velocidaddeConsumo;
+                if (energiaActual <= 0f)
+                {
+                    ConBateria = false;
+                    camara.gameObject.SetActive(false);
+                    CameraVideo.gameObject.SetActive(false);
+                    MainCamera.gameObject.SetActive(true);
+                }
+            }
+
+            bateria.value = energiaActual;
+            energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
+
         }
 
 		private void LateUpdate()
@@ -144,8 +172,17 @@ namespace StarterAssets
 		private void ChangeCamera()
 		{
 			boolCam = !boolCam;
-			MainCamera.gameObject.SetActive(!boolCam);
-			CameraVideo.gameObject.SetActive(boolCam);
+            camara.gameObject.SetActive(boolCam);
+            if (ConBateria)
+			{
+                CameraVideo.gameObject.SetActive(boolCam);
+                MainCamera.gameObject.SetActive(!boolCam);
+            }
+			else
+			{
+                //Poner texto en pantalla que no hay pila 
+                Debug.Log("e we no tienes pila");
+			}
 		}
 
 		private void GroundedCheck()
@@ -289,6 +326,9 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+
 		}
+
+
 	}
 }

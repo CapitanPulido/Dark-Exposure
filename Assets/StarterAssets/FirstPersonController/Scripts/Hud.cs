@@ -26,7 +26,6 @@ public class Hud : MonoBehaviour
     private void ChangeCamera()
     {
         boolPoint = !boolPoint;
-        //Point.gameObject.SetActive(!boolCam);
-        //CameraVideo.gameObject.SetActive(boolCam);
+        
     }
 }
