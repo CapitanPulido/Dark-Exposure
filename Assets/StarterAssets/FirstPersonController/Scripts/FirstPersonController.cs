@@ -79,10 +79,11 @@ namespace StarterAssets
 
 		public Camera MainCamera, CameraVideo;
 		private bool boolCam;
+        public Canvas inventario;
 
-	
+
 #if ENABLE_INPUT_SYSTEM
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -129,7 +130,7 @@ namespace StarterAssets
 			bateria.maxValue = energiaMaxima;
 			bateria.minValue = Mathf.Clamp01(energiaMinima);
 			energiaActual = energiaMaxima;
-            
+            inventario.gameObject.SetActive(true);
         }
 
 		private void Update()
@@ -162,9 +163,26 @@ namespace StarterAssets
             bateria.value = energiaActual;
             energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
 
+			if (Input.GetKeyDown(KeyCode.Tab))
+			{
+				inventario.gameObject.SetActive(true);
+            }
+            if (Input.GetKeyUp(KeyCode.Tab))
+            {
+                inventario.gameObject.SetActive(false);
+            }
         }
 
-		private void LateUpdate()
+        public void RecargarBateria()
+        {
+            if (Bateria == false)
+            {
+                energiaActual += energiaMaxima;
+                Bateria = true;
+            }
+        }
+
+        private void LateUpdate()
 		{
 			CameraRotation();
 		}

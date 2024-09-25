@@ -9,6 +9,7 @@ public class Linterna : MonoBehaviour
 
     public float energiaActual;
     public float energiaMaxima;
+    public float energiaMinima;
     public float velocidaddeConsumo;
 
     public bool Bateria = true;
@@ -57,6 +58,7 @@ public class Linterna : MonoBehaviour
         {
             RecargarBateria();
         }
+        energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
     }
 
     public void RecargarBateria()
