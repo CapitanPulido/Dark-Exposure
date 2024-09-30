@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 #endif
 
 namespace StarterAssets
@@ -11,7 +12,19 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		[Header("Player")]
+        public float energiaActual;
+        public float energiaMaxima;
+		private float energiaMinima = 0;
+        public float velocidaddeConsumo;
+
+        public bool Bateria = true;
+		public Canvas camara;
+		public Slider bateria;
+		public bool ConBateria = true;
+
+
+
+        [Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -64,9 +77,13 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+		public Camera MainCamera, CameraVideo;
+		private bool boolCam;
+        public Canvas inventario;
+
+
 #if ENABLE_INPUT_SYSTEM
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -93,7 +110,8 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
-		}
+            camara.gameObject.SetActive(false);
+        }
 
 		private void Start()
 		{
@@ -108,18 +126,81 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
+
+			bateria.maxValue = energiaMaxima;
+			bateria.minValue = Mathf.Clamp01(energiaMinima);
+			energiaActual = energiaMaxima;
+            inventario.gameObject.SetActive(true);
+        }
 
 		private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-		}
+			if (Input.GetKeyDown(KeyCode.Mouse1))
+			{
+				Invoke("ChangeCamera", 1);
+                
+            }
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                ChangeCamera();
+		
+            }
+            if (boolCam)
+            {
+                energiaActual -= Time.deltaTime * velocidaddeConsumo;
+                if (energiaActual <= 0f)
+                {
+                    ConBateria = false;
+                    camara.gameObject.SetActive(false);
+                    CameraVideo.gameObject.SetActive(false);
+                    MainCamera.gameObject.SetActive(true);
+                }
+            }
 
-		private void LateUpdate()
+            bateria.value = energiaActual;
+            energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
+
+			if (Input.GetKeyDown(KeyCode.Tab))
+			{
+				inventario.gameObject.SetActive(true);
+            }
+            if (Input.GetKeyUp(KeyCode.Tab))
+            {
+                inventario.gameObject.SetActive(false);
+            }
+        }
+
+        public void RecargarBateria()
+        {
+            if (Bateria == false)
+            {
+                energiaActual += energiaMaxima;
+                Bateria = true;
+            }
+        }
+
+        private void LateUpdate()
 		{
 			CameraRotation();
+		}
+
+		private void ChangeCamera()
+		{
+			boolCam = !boolCam;
+            camara.gameObject.SetActive(boolCam);
+            if (ConBateria)
+			{
+                CameraVideo.gameObject.SetActive(boolCam);
+                MainCamera.gameObject.SetActive(!boolCam);
+            }
+			else
+			{
+                //Poner texto en pantalla que no hay pila 
+                Debug.Log("e we no tienes pila");
+			}
 		}
 
 		private void GroundedCheck()
@@ -263,6 +344,9 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+
 		}
+
+
 	}
 }
