@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 171058189272777794}
   - component: {fileID: 4452230794757263431}
   - component: {fileID: 6659635460013616241}
+  - component: {fileID: 2263858606694293853}
+  - component: {fileID: 3737134918826818001}
   m_Layer: 5
   m_Name: Pressure
   m_TagString: Untagged
@@ -72,6 +74,40 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!95 &2263858606694293853
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864453991275536304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 009210f2d0a3de1489421b894d4300ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3737134918826818001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864453991275536304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc1c50ae2ceb264cb0dfdcf4bdae575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2263858606694293853}
 --- !u!1 &6780092818912293042
 GameObject:
   m_ObjectHideFlags: 0
