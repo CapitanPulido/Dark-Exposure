@@ -313,7 +313,7 @@ namespace StarterAssets
 
 		private void JumpAndGravity()
 		{
-			if (Grounded)
+			if (Grounded && !crouched)
 			{
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
