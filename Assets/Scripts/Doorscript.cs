@@ -5,7 +5,7 @@ using UnityEngine;
 public class Doorscript : MonoBehaviour
 {
     public GameObject hand;
-    public GameObject keyistrue;
+    public bool keyistrue;
     public bool isplayer;
     Animator animator;
     void Start()
@@ -35,16 +35,13 @@ public class Doorscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyistrue.activeInHierarchy)
+        if(keyistrue)
         {
-            if (isplayer)
-            {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     hand.SetActive(false);
                     animator.enabled = true;
                 }
-            }
         }
     }
 }

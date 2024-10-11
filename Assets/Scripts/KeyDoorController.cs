@@ -46,7 +46,7 @@ namespace KeySystem
 
                 else if (doorOpen && !pauseInteraction)
                 {
-                    doorAnim.Play(openAnimationName, 0, 0.0f);
+                    doorAnim.Play(closeAnimationName, 0, 0.0f);
                     doorOpen = false;
                     StartCoroutine(PauseDoorInteraction());
                 }

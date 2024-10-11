@@ -5,27 +5,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject inventoryimage;
-    bool istrue;
 
 
-    private void Start()
-    {
-        istrue = false;
-    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            istrue = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.Tab))
-        {
-            istrue = false;
-        }
-
-        if (istrue)
+        if (Input.GetKey(KeyCode.Tab))
         {
             inventoryimage.SetActive(true);
         }
@@ -33,5 +18,6 @@ public class Inventory : MonoBehaviour
         {
             inventoryimage.SetActive(false);
         }
+
     }
 }

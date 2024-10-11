@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyPickUp : MonoBehaviour
 {
     public GameObject keyimage;
-    public GameObject keyistrue;
+    public Doorscript Door;
     public GameObject hand;
     public bool isplayer;
     void Start()
@@ -37,9 +37,10 @@ public class KeyPickUp : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Mouse0))
             {
+                //Cambiar
                 keyimage.SetActive(true);
-                keyistrue.SetActive(true);
-                hand.SetActive(false);
+                //
+                Door.keyistrue = true;
                 Destroy(gameObject);
             }
         }
