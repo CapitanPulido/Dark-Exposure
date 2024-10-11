@@ -6,7 +6,7 @@ using UnityEngine;
 public class Linterna : MonoBehaviour
 {
     public Light LuzLinterna;
-
+    public GameObject camara;
     public float energiaActual;
     public float energiaMaxima;
     public float energiaMinima;
@@ -59,6 +59,8 @@ public class Linterna : MonoBehaviour
             RecargarBateria();
         }
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
+
+
     }
 
     public void RecargarBateria()
