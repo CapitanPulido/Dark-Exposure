@@ -81,6 +81,9 @@ namespace StarterAssets
 		private bool boolCam;
         public Canvas inventario;
 
+		private bool crouched;
+		private Animator animator;
+
 
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
@@ -116,6 +119,7 @@ namespace StarterAssets
 		private void Start()
 		{
 			_controller = GetComponent<CharacterController>();
+			animator = GetComponent<Animator>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();
@@ -159,6 +163,7 @@ namespace StarterAssets
                     MainCamera.gameObject.SetActive(true);
                 }
             }
+
 
             bateria.value = energiaActual;
             energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
@@ -277,11 +282,38 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-		}
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+				crouched = !crouched;
+				if (crouched)
+				{
+					animator.Play("Crouch");
+				}
+				else
+				{
+					animator.Play("CrouchUp");
+				}
+            }
+
+			if (crouched == true)
+			{
+				JumpHeight = 0f;
+				SprintSpeed = 2;
+				MoveSpeed = 2;
+			}
+
+            if (crouched == false)
+            {
+				JumpHeight = 1.2f;
+				SprintSpeed = 6;
+                MoveSpeed = 4;
+            }
+        }
 
 		private void JumpAndGravity()
 		{
-			if (Grounded)
+			if (Grounded && !crouched)
 			{
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
