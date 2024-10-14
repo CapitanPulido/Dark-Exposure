@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class PresionCardiaca : MonoBehaviour
 {
+    public Latido latido;
     public float MaxPressure;
     public float MinPressure;
     public float ActualPressure;
     public float Pressure;
+  
 
     FirstPersonController Controller;
     public Canvas DiedCanvas;
@@ -22,6 +24,7 @@ public class PresionCardiaca : MonoBehaviour
     void Start()
     {
         ActualPressure = 0;
+        
 
     }
 
@@ -44,10 +47,12 @@ public class PresionCardiaca : MonoBehaviour
         if (isEnemy) 
         {
             ActualPressure += Time.deltaTime * Pressure;
+            latido.PLayPressure();
         }
         else
         {
             ActualPressure -= Time.deltaTime * Pressure;
+            
         }
     }
 
