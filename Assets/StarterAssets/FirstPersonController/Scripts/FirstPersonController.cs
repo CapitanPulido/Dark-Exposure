@@ -142,17 +142,31 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			if (Input.GetKeyDown(KeyCode.Mouse1))
+			if (Input.GetKey(KeyCode.Mouse1))
 			{
-				Invoke("ChangeCamera", 1);
-                
+				camara.gameObject.SetActive(true);
+				if (ConBateria)
+				{
+					CameraVideo.gameObject.SetActive(true);
+					MainCamera.gameObject.SetActive(false);
+				}
+				else
+				{
+					//Poner texto en pantalla que no hay pila 
+					Debug.Log("e we no tienes pila");
+				}
+				//Invoke("ChangeCamera", 1);
+			}
+
+			if (Input.GetKeyUp(KeyCode.Mouse1))
+			{
+                CameraVideo.gameObject.SetActive(false);
+                MainCamera.gameObject.SetActive(true);
+                camara.gameObject.SetActive(false);
             }
-            if (Input.GetKeyUp(KeyCode.Mouse1))
-            {
-                ChangeCamera();
-		
-            }
-            if (boolCam)
+
+
+				if (boolCam)
             {
                 energiaActual -= Time.deltaTime * velocidaddeConsumo;
                 if (energiaActual <= 0f)
@@ -194,19 +208,18 @@ namespace StarterAssets
 
 		private void ChangeCamera()
 		{
-			boolCam = !boolCam;
-            camara.gameObject.SetActive(boolCam);
+            camara.gameObject.SetActive(true);
             if (ConBateria)
-			{
-                CameraVideo.gameObject.SetActive(boolCam);
-                MainCamera.gameObject.SetActive(!boolCam);
+            {
+                CameraVideo.gameObject.SetActive(true);
+                MainCamera.gameObject.SetActive(false);
             }
-			else
-			{
+            else
+            {
                 //Poner texto en pantalla que no hay pila 
                 Debug.Log("e we no tienes pila");
-			}
-		}
+            }
+        }
 
 		private void GroundedCheck()
 		{
