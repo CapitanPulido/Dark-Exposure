@@ -5,37 +5,58 @@ using UnityEngine.InputSystem.XR;
 
 public class BateriaC : MonoBehaviour
 {
-    Linterna linterna;
+    public Linterna linterna;
 
-    public float NumMaxUsos;
-    public float NumMinUsos;
-    public float NumActualUsos;
+    public GameObject keyimage;
+    public GameObject hand;
+    public bool isplayer;
 
-    public bool TienesBaterias = false;
+
+
     void Start()
     {
-        
+        isplayer = false;
     }
 
     
     void Update()
     {
-        NumActualUsos = Mathf.Clamp(NumActualUsos, NumMinUsos, NumMaxUsos);
 
-        if (NumActualUsos >= 0)
+        if (isplayer)
         {
-            TienesBaterias = false;
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                keyimage.SetActive(true);
+                hand.SetActive(false);
+                Destroy(gameObject);
+                Bateria();
+            }
         }
     }
 
     public void Bateria()
     {
         linterna.RecargarBateria();
-        NumActualUsos -= 1;
     }
 
-    public void ObtuvisteBateria()
+
+    void OnTriggerEnter(Collider other)
     {
-        NumActualUsos += 1;
+        if (other.tag == "Player")
+        {
+            isplayer = true;
+            hand.SetActive(true);
+        }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            isplayer = false;
+            hand.SetActive(false);
+        }
+    }
+
+    
 }

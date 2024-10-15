@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 1266292304320916431}
   - component: {fileID: 6057616059845484545}
   - component: {fileID: 4570840100517245803}
+  - component: {fileID: 174129720167078369}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -390,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec27a94690f878c4fbb361a2df4876f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  latido: {fileID: 0}
   MaxPressure: 0
   MinPressure: 0
   ActualPressure: 0
@@ -518,3 +520,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &174129720167078369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde488cd31f5f8942bb929acaa6fbfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryimage: {fileID: 0}
