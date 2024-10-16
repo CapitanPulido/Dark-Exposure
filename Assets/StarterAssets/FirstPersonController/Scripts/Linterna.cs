@@ -65,10 +65,8 @@ public class Linterna : MonoBehaviour
 
     public void RecargarBateria()
     {
-        if (Bateria == false)
-        {
-            energiaActual += energiaMaxima;
-            Bateria = true;
-        }
+        energiaActual += energiaMaxima;
+        Bateria = true;
+
     }
 }
