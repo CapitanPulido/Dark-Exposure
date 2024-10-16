@@ -2481,13 +2481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d2cc0eb0794ac44a0cf79cb0b2f9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShowUI: 1
-  showDoorLockedUI: {fileID: 957907370}
-  waitTimer: 1
-  pauseInteraction: 0
-  openAngle: -180
-  closeAngle: -90
-  speed: 2
 --- !u!4 &1774212193
 Transform:
   m_ObjectHideFlags: 0
@@ -2829,13 +2822,29 @@ PrefabInstance:
       value: 196.591
       objectReference: {fileID: 0}
     - target: {fileID: 975848464919146288, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.636392
+      objectReference: {fileID: 0}
+    - target: {fileID: 975848464919146288, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.5518956
+      objectReference: {fileID: 0}
+    - target: {fileID: 975848464919146288, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8846705
+      objectReference: {fileID: 0}
+    - target: {fileID: 975848464919146288, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.572
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 975848464919146288, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.244
+      value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1062550663151860474, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: d4595ffe2e9c0a747b8000a73805f998, type: 3}
     - target: {fileID: 2265039624657016714, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_SizeDelta.x
       value: 300.767
@@ -2846,11 +2855,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2265039624657016714, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 737.2936
+      value: 779.6
       objectReference: {fileID: 0}
     - target: {fileID: 2265039624657016714, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 335.79077
+      value: 382.2
       objectReference: {fileID: 0}
     - target: {fileID: 3781634863495934684, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2874,6 +2883,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4748566835075222506, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772774097547319098, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
@@ -2885,12 +2898,24 @@ PrefabInstance:
       value: 196.591
       objectReference: {fileID: 0}
     - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.26772487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.26772487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.26772487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -727.068
+      value: -849
       objectReference: {fileID: 0}
     - target: {fileID: 6366291334683639718, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300.404
+      value: 394
       objectReference: {fileID: 0}
     - target: {fileID: 7442269213888970004, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
       propertyPath: m_Pivot.x
@@ -3368,13 +3393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d2cc0eb0794ac44a0cf79cb0b2f9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShowUI: 1
-  showDoorLockedUI: {fileID: 1672397370}
-  waitTimer: 1
-  pauseInteraction: 0
-  openAngle: -90
-  closeAngle: 0
-  speed: 2
 --- !u!4 &2111669388
 Transform:
   m_ObjectHideFlags: 0
@@ -3995,8 +4013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LuzLinterna: {fileID: 8428789964535555729}
   camara: {fileID: 1222618866}
-  energiaActual: 10000
-  energiaMaxima: 10000
+  energiaActual: 100
+  energiaMaxima: 100
   energiaMinima: 0
   velocidaddeConsumo: 3
   Bateria: 1
