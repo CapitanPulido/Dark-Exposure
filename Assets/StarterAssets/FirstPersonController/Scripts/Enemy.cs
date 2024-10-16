@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
+
     public float patrolRange = 10f;   
     public float waitTime = 2f;       
     public float detectionRadius = 10f; 
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        //Vector3 noisePosition = new Vector3(x.y.z);
+       
     }
 
     void MoveToRandomPoint()
