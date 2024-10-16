@@ -138,35 +138,20 @@ namespace StarterAssets
         }
 
 		private void Update()
-		{
-			JumpAndGravity();
-			GroundedCheck();
-			Move();
-			if (Input.GetKey(KeyCode.Mouse1))
-			{
-				camara.gameObject.SetActive(true);
-				if (ConBateria)
-				{
-					CameraVideo.gameObject.SetActive(true);
-					MainCamera.gameObject.SetActive(false);
-				}
-				else
-				{
-					//Poner texto en pantalla que no hay pila 
-					Debug.Log("e we no tienes pila");
-				}
-				//Invoke("ChangeCamera", 1);
-			}
-
-			if (Input.GetKeyUp(KeyCode.Mouse1))
-			{
-                CameraVideo.gameObject.SetActive(false);
-                MainCamera.gameObject.SetActive(true);
-                camara.gameObject.SetActive(false);
+        {
+            JumpAndGravity();
+            GroundedCheck();
+            Move();
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                Invoke("ChangeCamera", 1);
             }
+            if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                ChangeCamera();
 
-
-				if (boolCam)
+            }
+            if (boolCam)
             {
                 energiaActual -= Time.deltaTime * velocidaddeConsumo;
                 if (energiaActual <= 0f)
@@ -182,9 +167,9 @@ namespace StarterAssets
             bateria.value = energiaActual;
             energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
 
-			if (Input.GetKeyDown(KeyCode.Tab))
-			{
-				inventario.gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                inventario.gameObject.SetActive(true);
             }
             if (Input.GetKeyUp(KeyCode.Tab))
             {
@@ -208,11 +193,12 @@ namespace StarterAssets
 
 		private void ChangeCamera()
 		{
-            camara.gameObject.SetActive(true);
+			boolCam = !boolCam;
+            camara.gameObject.SetActive(boolCam);
             if (ConBateria)
             {
-                CameraVideo.gameObject.SetActive(true);
-                MainCamera.gameObject.SetActive(false);
+                CameraVideo.gameObject.SetActive(boolCam);
+                MainCamera.gameObject.SetActive(!boolCam);
             }
             else
             {
