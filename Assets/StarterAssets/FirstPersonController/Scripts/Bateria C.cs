@@ -1,62 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class BateriaC : MonoBehaviour
 {
     public Linterna linterna;
-
-    public GameObject keyimage;
     public GameObject hand;
-    public bool isplayer;
-
-
+    public bool isPlayer;
 
     void Start()
     {
-        isplayer = false;
+        isPlayer = false;
     }
 
-    
     void Update()
     {
-
-        if (isplayer)
+        if (isPlayer && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                keyimage.SetActive(true);
-                hand.SetActive(false);
-                Destroy(gameObject);
-                Bateria();
-            }
+            hand.SetActive(false);
+            StartCoroutine(Destroy());
+            
         }
     }
 
-    public void Bateria()
+    public void Bateria(float cantidad)
     {
-        linterna.RecargarBateria();
+        linterna.RecargarBateria(cantidad);
     }
-
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            isplayer = true;
+            isPlayer = true;
             hand.SetActive(true);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            isplayer = false;
+            isPlayer = false;
             hand.SetActive(false);
         }
     }
 
-    
+    IEnumerator Destroy()
+    {
+        Bateria(100); // Puedes ajustar la cantidad que recarga
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
+    }
 }
+

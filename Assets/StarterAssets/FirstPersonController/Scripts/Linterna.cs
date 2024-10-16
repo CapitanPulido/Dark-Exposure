@@ -14,6 +14,9 @@ public class Linterna : MonoBehaviour
 
     public bool Bateria = true;
 
+    public bool Bt = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,19 +57,19 @@ public class Linterna : MonoBehaviour
             LuzLinterna.enabled = false;
             Bateria = false;
         }
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            RecargarBateria();
+            RecargarBateria(energiaMaxima);
         }
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
 
 
     }
 
-    public void RecargarBateria()
+    public void RecargarBateria(float cantidad)
     {
-        energiaActual += energiaMaxima;
+        energiaActual += cantidad; // Recarga la cantidad especificada
+        energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima); // Clampeo para no exceder el máximo
         Bateria = true;
-
     }
 }

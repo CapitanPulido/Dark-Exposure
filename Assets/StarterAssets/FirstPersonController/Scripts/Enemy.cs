@@ -57,6 +57,8 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+
+        //Vector3 noisePosition = new Vector3(x.y.z);
     }
 
     void MoveToRandomPoint()
