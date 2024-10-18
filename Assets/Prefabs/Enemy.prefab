@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7549480981643191449}
   - component: {fileID: 9078646785509315417}
   - component: {fileID: 5919180551140105640}
+  - component: {fileID: 8749147084941389650}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -144,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
+  Collist: []
   patrolRange: 50
   waitTime: 2
   detectionRadius: 10
@@ -196,3 +198,16 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8749147084941389650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998914823095325955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4df92e25dc3d4646aff4661c6f4b22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearingRadius: 10
