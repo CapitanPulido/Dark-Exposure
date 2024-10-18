@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -81,9 +82,12 @@ namespace StarterAssets
 		private bool boolCam;
         public Canvas inventario;
 
+
+		bool CamChanged;
 		private bool crouched;
 		private Animator animator;
 
+        public float timer = 0;
 
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
@@ -142,14 +146,34 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+
+            /*
+			 * float timer = 0;
+			 * 
+			 *    if (Input.GetKey(KeyCode.Mouse1))
+                  {
+                      timer += time.delatime;
+                  }
+			 * 
+			 * 
+			 * */
+            if (Input.GetKey(KeyCode.Mouse1))
             {
-                Invoke("ChangeCamera", 1);
+				timer += Time.deltaTime;
+				if (timer >= 1 && !CamChanged)
+				{
+					CamChanged = true;
+					ChangeCamera();
+				}
             }
             if (Input.GetKeyUp(KeyCode.Mouse1))
             {
-                ChangeCamera();
-
+                timer = 0;
+                if (CamChanged)
+                {
+                    CamChanged = false;
+                    ChangeCamera();
+                }
             }
             if (boolCam)
             {
@@ -193,7 +217,7 @@ namespace StarterAssets
 
 		private void ChangeCamera()
 		{
-			boolCam = !boolCam;
+				boolCam = !boolCam;
             camara.gameObject.SetActive(boolCam);
             if (ConBateria)
             {
