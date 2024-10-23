@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DoorscriptArchivero : MonoBehaviour
+public class DoorscriptConsultorio2 : MonoBehaviour
 {
     private int timeToShowUI = 1;
     public GameObject showDoorLockedUI = null;
     public TextMeshProUGUI textoPuerta;
     public GameObject hand;
-    public GameObject keyArchiveroistrue;
+    public GameObject keyConsultorio2istrue;
     public bool isplayer;
     Animator animator;
     void Start()
@@ -39,31 +39,32 @@ public class DoorscriptArchivero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-            if (isplayer)
-            {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    if (keyArchiveroistrue.activeInHierarchy)
-                    {
-                        hand.SetActive(false);
-                        animator.enabled = true;
-                    }
-                    else if (!showDoorLockedUI.activeInHierarchy)
-                    {
-                        StartCoroutine(ShowDoorLockedUI());
-                    }
 
+
+        if (isplayer)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (keyConsultorio2istrue.activeInHierarchy)
+                {
+                    hand.SetActive(false);
+                    animator.enabled = true;
+                }
+                else if (!showDoorLockedUI.activeInHierarchy)
+                {
+                    StartCoroutine(ShowDoorLockedUI());
+                }
             }
         }
-        
+
+
+
     }
 
     IEnumerator ShowDoorLockedUI()
     {
         showDoorLockedUI.SetActive(true);
-        textoPuerta.text = "Find the key for door 7u7";
+        textoPuerta.text = "Find the key for Consultorio 2";
         yield return new WaitForSeconds(timeToShowUI);
         showDoorLockedUI.SetActive(false);
     }
