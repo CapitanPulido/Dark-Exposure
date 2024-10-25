@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Doorscript : MonoBehaviour
 {
+    private int timeToShowUI = 1;
+    public GameObject showDoorLockedUI = null;
+    public TextMeshProUGUI textoPuerta;
     public GameObject hand;
     public GameObject keyistrue;
     public bool isplayer;
@@ -35,16 +39,34 @@ public class Doorscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyistrue.activeInHierarchy)
-        {
+      
+        
             if (isplayer)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    hand.SetActive(false);
-                    animator.enabled = true;
+                    if (keyistrue.activeInHierarchy)
+                    {
+                        hand.SetActive(false);
+                        animator.enabled = true;
+                    }
+                    else if (!showDoorLockedUI.activeInHierarchy)
+                    {
+                        StartCoroutine(ShowDoorLockedUI());
+                    }
                 }
             }
-        }
+        
+      
+
+    }
+
+    IEnumerator ShowDoorLockedUI()
+    {
+        showDoorLockedUI.SetActive(true);
+        textoPuerta.text = "Find the key for door 9";
+        yield return new WaitForSeconds(timeToShowUI);
+        showDoorLockedUI.SetActive(false);
     }
 }
+

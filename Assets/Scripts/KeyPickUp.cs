@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeyPickUp : MonoBehaviour
 {
+    private int timeToShowUI = 1;
     public GameObject keyimage;
+
+    public TextMeshProUGUI textollave;
     public GameObject keyistrue;
-    public GameObject hand;
+    
     public bool isplayer;
+    public string texto;
+    Animator animator;
     void Start()
     {
         isplayer = false;
+        animator = GetComponent<Animator>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -18,7 +25,7 @@ public class KeyPickUp : MonoBehaviour
         if(other.tag == "Player")
         {
             isplayer = true;
-            hand.SetActive(true);
+            
         }
     }
 
@@ -27,7 +34,7 @@ public class KeyPickUp : MonoBehaviour
         if (other.tag == "Player")
         {
             isplayer = false;
-            hand.SetActive(false);
+            
         }
     }
 
@@ -39,9 +46,22 @@ public class KeyPickUp : MonoBehaviour
             {
                 keyimage.SetActive(true);
                 keyistrue.SetActive(true);
-                hand.SetActive(false);
+                textollave.gameObject.SetActive(false);
                 Destroy(gameObject);
             }
+            else if (!textollave.gameObject.activeInHierarchy)
+            {
+                textollave.gameObject.SetActive(true);
+                StartCoroutine(ShowKeydUI());
+            }
         }
+    }
+
+    IEnumerator ShowKeydUI()
+    {
+
+        textollave.text = texto;
+        yield return new WaitForSeconds(timeToShowUI);
+        textollave.gameObject.SetActive(false);
     }
 }
