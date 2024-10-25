@@ -1155,6 +1155,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3961035276775894057, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5144528794743485475, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
       propertyPath: m_Name
       value: SpaceInventory1
@@ -1165,7 +1169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5604409653954822917, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5755325901577308440, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
       propertyPath: m_Color.a
@@ -1185,7 +1189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8357776267218740684, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8633699061228058350, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
       propertyPath: m_Pivot.x

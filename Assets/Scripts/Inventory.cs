@@ -1,37 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject inventoryimage;
-    bool istrue;
-
+    public List<GameObject> items; // Lista de objetos en el inventario
+    public int maxSlots = 10; // Número máximo de espacios en el inventario
 
     private void Start()
     {
-        istrue = false;
+        items = new List<GameObject>(maxSlots); // Inicializa la lista con el tamaño máximo
     }
 
-    private void Update()
+    public bool AddItem(GameObject item)
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (items.Count < maxSlots)
         {
-            istrue = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.Tab))
-        {
-            istrue = false;
-        }
-
-        if (istrue)
-        {
-            inventoryimage.SetActive(true);
+            items.Add(item); // Agrega el objeto a la lista
+            item.SetActive(false); // Desactiva el objeto en el mundo
+            Debug.Log("Objeto añadido al inventario: " + item.name);
+            return true;
         }
         else
         {
-            inventoryimage.SetActive(false);
+            Debug.Log("Inventario lleno. No se puede agregar el objeto: " + item.name);
+            return false;
         }
     }
 }
