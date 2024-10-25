@@ -40,8 +40,8 @@ public class Enemy : MonoBehaviour
         if (player != null && Vector3.Distance(transform.position, player.position) <= detectionRadius)
         {
 
-            isChasingPlayer = true;
-            agent.SetDestination(player.position);
+          
+            
         }
         else
         {
@@ -84,7 +84,11 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(hit.position);
         lastDestination = hit.position;
     }
-
+    public void MoveToPlayerPosition()
+    {
+            isChasingPlayer = true;
+            agent.SetDestination(player.position);
+    }
     void MoveToSoundPoint()
     {
 

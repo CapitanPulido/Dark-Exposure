@@ -3,59 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ReproducirAudio : MonoBehaviour
-{ 
+{
     public LayerMask enemyLayer;
     public float soundRange = 10f;
-    public AudioSource x;
-    public Enemy enemy;
+    public AudioSource audioSource;
 
+    // Emitir sonido y notificar a enemigos cercanos
     public void EmitSound()
     {
-        x.Play();
+        audioSource.Play();
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, soundRange, enemyLayer);
-
-       
-
-        if(hitColliders.Length == 1)
-        
+        foreach (var hitCollider in hitColliders)
         {
-            foreach (var hitCollider in hitColliders)
+            EnemyHearing enemyHearing = hitCollider.GetComponent<EnemyHearing>();
+            if (enemyHearing != null)
             {
-
-                EnemyHearing enemyHearing = hitCollider.GetComponent<EnemyHearing>();
-                if (enemyHearing != null)
-                {
-                    enemyHearing.OnSoundEvent(transform.position);
-
-
-                }
+                // Envía la posición del sonido al enemigo
+                enemyHearing.OnSoundEvent(transform.position);
             }
         }
     }
 
-
     void Update()
     {
+        // Emite el sonido al presionar la tecla Space
         if (Input.GetKeyDown(KeyCode.Space))
         {
             EmitSound();
         }
-
     }
+
     private void OnCollisionEnter(Collision collision)
     {
+        // Emite sonido al tocar el "Suelo"
         if (collision.gameObject.CompareTag("Suelo"))
         {
             EmitSound();
         }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            enemy.MoveToRandomPoint();
-            Debug.Log("Ya llegue");
-        }
     }
-
 }
-

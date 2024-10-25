@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyHearing : MonoBehaviour
 {
-    public float hearingRadius = 10f;
-
+    public float hearingRadius;
     private NavMeshAgent agent;
 
     void Start()
@@ -14,15 +13,17 @@ public class EnemyHearing : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-
+    // Método para reaccionar ante eventos de sonido
     public void OnSoundEvent(Vector3 soundPosition)
     {
         float distanceToSound = Vector3.Distance(transform.position, soundPosition);
 
         if (distanceToSound <= hearingRadius)
         {
-            Debug.Log("moviendo a a ubicación de sonido");
+            Debug.Log("Moviendo a la ubicación de sonido: " + soundPosition);
             agent.SetDestination(soundPosition);
         }
     }
 }
+
+

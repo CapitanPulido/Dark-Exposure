@@ -1,46 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class EnemyRaycast : MonoBehaviour
 {
     public RaycastHit hit;
-    public float range;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //for (int i = 0; i < 12; i++)
-        //{
-        //    RaycastHit ray = new RaycastHit();
-        //    ray.distance = range;
-        //    hits[i] = ray;
-        //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float range = 10f; // Rango del campo de visión
+    public LayerMask detectionLayer; // Capa que contiene obstáculos y jugadores
+    public Enemy enemy;
 
     private void FixedUpdate()
     {
-        for(int i = 1;i < 12; i++)
+        // Configuración del campo de visión de 120 grados con 12 rayos
+        for (int i = -60; i <= 60; i += 10)
         {
-            Vector3 angulo = new Vector3(transform.rotation.x, -90 + (i*5),transform.rotation.z);
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,range))
+            // Calcula la dirección del rayo en el ángulo correspondiente
+            Quaternion rotation = Quaternion.Euler(0, i, 0);
+            Vector3 rayDirection = rotation * transform.forward;
+
+            // Lanza el raycast en la dirección calculada
+            if (Physics.Raycast(transform.position, rayDirection, out hit, range, detectionLayer))
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward + angulo) * range, Color.red);
+                // Si detecta un obstáculo o al jugador
+                if (hit.collider.CompareTag("Player"))
+                {
+                    // Detecta al jugador si no hay obstáculos en medio
+                    Debug.DrawRay(transform.position, rayDirection * hit.distance, Color.red);
+                    Debug.Log("Jugador detectado sin obstáculos: " + hit.collider.gameObject.name);
+                    enemy.MoveToPlayerPosition();
+                }
+                else
+                {
+                    // Impactó en un obstáculo (bloquea la visión)
+                    Debug.DrawRay(transform.position, rayDirection * hit.distance, Color.yellow);
+                }
             }
             else
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward + angulo)* range, Color.blue);
+                // Si no impacta ningún objeto dentro del rango
+                Debug.DrawRay(transform.position, rayDirection * range, Color.blue);
             }
         }
-    
-       
     }
 }
