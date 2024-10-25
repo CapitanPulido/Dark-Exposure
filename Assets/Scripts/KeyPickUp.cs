@@ -7,7 +7,7 @@ public class KeyPickUp : MonoBehaviour
 {
     private int timeToShowUI = 1;
     public GameObject keyimage;
-    public GameObject showKeyUI = null;
+
     public TextMeshProUGUI textollave;
     public GameObject keyistrue;
     
@@ -46,11 +46,12 @@ public class KeyPickUp : MonoBehaviour
             {
                 keyimage.SetActive(true);
                 keyistrue.SetActive(true);
-                
+                textollave.gameObject.SetActive(false);
                 Destroy(gameObject);
             }
-            else if (!showKeyUI.activeInHierarchy)
+            else if (!textollave.gameObject.activeInHierarchy)
             {
+                textollave.gameObject.SetActive(true);
                 StartCoroutine(ShowKeydUI());
             }
         }
@@ -58,9 +59,9 @@ public class KeyPickUp : MonoBehaviour
 
     IEnumerator ShowKeydUI()
     {
-        showKeyUI.SetActive(true);
+
         textollave.text = texto;
         yield return new WaitForSeconds(timeToShowUI);
-        showKeyUI.SetActive(false);
+        textollave.gameObject.SetActive(false);
     }
 }
