@@ -50,13 +50,6 @@ public class KeyPickUp : MonoBehaviour
                 keyistrue.SetActive(true);
                 textollave.gameObject.SetActive(false);
 
-                bool added = inventory.AddItem(gameObject);
-
-                if (added)
-                {
-                    Debug.Log("Objeto recogido: " + gameObject.name);
-                }
-
                 Destroy(gameObject);
             }
             else if (!textollave.gameObject.activeInHierarchy)
