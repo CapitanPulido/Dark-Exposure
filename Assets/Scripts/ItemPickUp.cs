@@ -33,7 +33,7 @@ public class PickUpItem : MonoBehaviour
             {
                 Debug.Log("Objeto recogido: " + gameObject.name);
             }
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
