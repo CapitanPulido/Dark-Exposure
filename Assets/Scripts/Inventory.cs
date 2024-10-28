@@ -10,11 +10,9 @@ public class Inventory : MonoBehaviour
     public int maxSlots = 10;                  // Número máximo de espacios en el inventario
     public Transform handTransform;            // Punto donde el objeto se coloca en la mano del jugador
     private GameObject equippedItem;           // Objeto actualmente en la mano
-    public GameObject contextMenuPrefab;       // Prefab del menú de opciones
-    private GameObject contextMenu;            // Menú de opciones en tiempo real
     private GameObject selectedItem;           // Objeto seleccionado en el inventario
-    public Button equipButton;                  // Referencia al botón de equipar
-    public Button dropButton;                   // Referencia al botón de soltar
+    public Button equipButton;                 // Referencia al botón de equipar
+    public Button dropButton;                  // Referencia al botón de soltar
 
     public Canvas canvas;
 
@@ -58,6 +56,12 @@ public class Inventory : MonoBehaviour
         if (equippedItem != null && Input.GetKeyDown(KeyCode.G))
         {
             DropEquippedItem();
+        }
+
+        // Lanzar el objeto equipado al presionar la rueda del raton
+        if(equippedItem != null && Input.GetMouseButtonDown(2))
+        {
+            ThrowEquippedItem();
         }
     }
 
@@ -206,5 +210,29 @@ public class Inventory : MonoBehaviour
         selectedItem = null; // Limpia la selección
         equipButton.gameObject.SetActive(false); // Desactiva el botón de equipar
         dropButton.gameObject.SetActive(false); // Desactiva el botón de soltar
+    }
+
+    private void ThrowEquippedItem()
+    {
+        if (equippedItem != null)
+        {
+            equippedItem.transform.parent = null; // Separa el objeto de la mano
+            equippedItem.SetActive(true); // Asegúrate de que esté visible
+
+            // Posiciona el objeto en la posición del jugador
+            equippedItem.transform.position = transform.position + new Vector3(0, 0.5f, 0); // Ajusta la altura si es necesario
+
+            Rigidbody rb = equippedItem.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false; // Asegúrate de que no sea kinemático
+                                        // Lanza el objeto hacia adelante con una fuerza
+                Vector3 throwDirection = Camera.main.transform.forward; // Dirección en la que se ve la cámara
+                rb.AddForce(throwDirection * 50f, ForceMode.Impulse); // Ajusta la fuerza según sea necesario
+            }
+
+            Debug.Log("Objeto lanzado: " + equippedItem.name);
+            equippedItem = null; // Libera el espacio de la mano
+        }
     }
 }
