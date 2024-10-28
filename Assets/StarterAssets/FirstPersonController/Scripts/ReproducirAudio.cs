@@ -7,6 +7,7 @@ public class ReproducirAudio : MonoBehaviour
     public LayerMask enemyLayer;
     public float soundRange = 10f;
     public AudioSource audioSource;
+    public Enemy enemy;
 
     // Emitir sonido y notificar a enemigos cercanos
     public void EmitSound()
@@ -27,11 +28,11 @@ public class ReproducirAudio : MonoBehaviour
 
     void Update()
     {
-        // Emite el sonido al presionar la tecla Space
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EmitSound();
-        }
+        //// Emite el sonido al presionar la tecla Space
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    EmitSound();
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,5 +42,21 @@ public class ReproducirAudio : MonoBehaviour
         {
             EmitSound();
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SeguirRuido();
+            enemy.MoveToRandomPoint();
+        }
+    }
+
+   
+    IEnumerator SeguirRuido()
+    {
+        Debug.Log("Moviendo");
+
+        yield return new WaitForSeconds(3);
+        enemy.MoveToRandomPoint();
     }
 }
+
