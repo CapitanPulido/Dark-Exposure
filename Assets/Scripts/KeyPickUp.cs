@@ -6,7 +6,8 @@ using UnityEngine;
 public class KeyPickUp : MonoBehaviour
 {
     private int timeToShowUI = 1;
-    public GameObject keyimage;
+    public Texture keyimage;
+    public string itemName;        // Nombre del objeto
 
     public TextMeshProUGUI textollave;
     public GameObject keyistrue;
@@ -46,7 +47,7 @@ public class KeyPickUp : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Mouse0))
             {
-                keyimage.SetActive(true);
+                //keyimage.SetActive(true);
                 keyistrue.SetActive(true);
                 textollave.gameObject.SetActive(false);
                 Destroy(gameObject);

@@ -69,36 +69,43 @@ public class Inventory : MonoBehaviour
     {
         if (items.Count < maxSlots)
         {
-            items.Add(item); // Agrega el objeto a la lista
-            item.SetActive(false); // Desactiva el objeto en el mundo
+            ////items.Add(item); // Agrega el objeto a la lista
+            ////item.SetActive(false); // Desactiva el objeto en el mundo
 
-            // Busca en allItems la textura asociada a este objeto
-            ItemData itemData = allItems.Find(data => data.prefab == item);
-            if (itemData != null)
-            {
+            //// Busca en allItems la textura asociada a este objeto
+            //ItemData itemData = allItems.Find(data => data.prefab == item);
+            
                 // Encuentra el primer espacio vacío en el Canvas y asigna la textura del objeto
-                for (int i = 0; i < inventorySlots.Count; i++)
-                {
-                    if (inventorySlots[i].texture == null) // Comprueba si el espacio está vacío
+        for (int i = 0; i < inventorySlots.Count; i++)
+         {
+           if (inventorySlots[i].texture == null) // Comprueba si el espacio está vacío
                     {
-                        inventorySlots[i].texture = itemData.itemTexture; // Asigna la textura
+                        inventorySlots[i].texture = item.GetComponent<KeyPickUp>().keyimage; ; // Asigna la textura
                         break;
                     }
-                }
-                Debug.Log("Objeto añadido al inventario: " + itemData.itemName);
+         }
+                Debug.Log("Objeto añadido al inventario: " + item.GetComponent<KeyPickUp>().itemName);
                 return true;
-            }
-            else
-            {
-                Debug.LogWarning("El objeto no se encuentra en la lista general de items.");
-                return false;
-            }
+            
+            
         }
         else
         {
             Debug.Log("Inventario lleno. No se puede agregar el objeto: " + item.name);
             return false;
         }
+
+        // Encuentra el primer espacio vacío en el Canvas y asigna la textura del objeto
+        for (int i = 0; i < inventorySlots.Count; i++)
+        {
+            if (inventorySlots[i].texture == null) // Comprueba si el espacio está vacío
+            {
+                inventorySlots[i].texture = item.GetComponent<KeyPickUp>().keyimage; ; // Asigna la textura
+                break;
+            }
+        }
+        Debug.Log("Objeto añadido al inventario: " + item.GetComponent<KeyPickUp>().itemName);
+        return true;
     }
 
     public bool RemoveItem(GameObject item)
