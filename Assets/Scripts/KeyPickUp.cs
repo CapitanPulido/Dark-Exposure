@@ -14,9 +14,7 @@ public class KeyPickUp : MonoBehaviour
     public bool isplayer;
     public string texto;
     Animator animator;
-
     public Inventory inventory; // Referencia al inventario
-
     void Start()
     {
         isplayer = false;
@@ -52,7 +50,6 @@ public class KeyPickUp : MonoBehaviour
                 keyistrue.SetActive(true);
                 textollave.gameObject.SetActive(false);
                 Destroy(gameObject);
-
                 bool added = inventory.AddItem(gameObject);
                 if (added)
                 {
@@ -60,7 +57,7 @@ public class KeyPickUp : MonoBehaviour
                 }
                 
 
-                
+
             }
             else if (!textollave.gameObject.activeInHierarchy)
             {
