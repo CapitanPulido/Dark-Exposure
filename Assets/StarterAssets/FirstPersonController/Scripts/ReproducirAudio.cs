@@ -3,48 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ReproducirAudio : MonoBehaviour
-{ 
+{
     public LayerMask enemyLayer;
     public float soundRange = 10f;
-    public AudioSource x;
+    public AudioSource audioSource;
     public Enemy enemy;
 
+    // Emitir sonido y notificar a enemigos cercanos
     public void EmitSound()
     {
-        x.Play();
+        audioSource.Play();
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, soundRange, enemyLayer);
-
-       
-
-        if(hitColliders.Length == 1)
-        
+        foreach (var hitCollider in hitColliders)
         {
-            foreach (var hitCollider in hitColliders)
+            EnemyHearing enemyHearing = hitCollider.GetComponent<EnemyHearing>();
+            if (enemyHearing != null)
             {
-
-                EnemyHearing enemyHearing = hitCollider.GetComponent<EnemyHearing>();
-                if (enemyHearing != null)
-                {
-                    enemyHearing.OnSoundEvent(transform.position);
-
-
-                }
+                // Envía la posición del sonido al enemigo
+                enemyHearing.OnSoundEvent(transform.position);
             }
         }
     }
 
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            EmitSound();
-        }
-
+        //// Emite el sonido al presionar la tecla Space
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    EmitSound();
+        //}
     }
+
     private void OnCollisionEnter(Collision collision)
     {
+        // Emite sonido al tocar el "Suelo"
         if (collision.gameObject.CompareTag("Suelo"))
         {
             EmitSound();
@@ -52,10 +45,18 @@ public class ReproducirAudio : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            SeguirRuido();
             enemy.MoveToRandomPoint();
-            Debug.Log("Ya llegue");
         }
     }
 
+   
+    IEnumerator SeguirRuido()
+    {
+        Debug.Log("Moviendo");
+
+        yield return new WaitForSeconds(3);
+        enemy.MoveToRandomPoint();
+    }
 }
 
