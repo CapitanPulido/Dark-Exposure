@@ -6,6 +6,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     public Canvas Menu;
     public Canvas MenuPausa;
+    public Canvas MenuSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class MenuPrincipal : MonoBehaviour
         Pausa();
         Cursor.lockState = CursorLockMode.None; // Libera el cursor
         Cursor.visible = true;
+        MenuSFX.enabled = false;
     }
 
     // Update is called once per frame
@@ -38,7 +40,33 @@ public class MenuPrincipal : MonoBehaviour
     {
         Time.timeScale = 1f;
         Menu.enabled = false;
+        MenuPausa.enabled = false;
         Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor
         Cursor.visible = false;
+    }
+
+    public void SFX()
+    {
+        MenuSFX.enabled = true;
+        Menu.enabled = false;
+        MenuPausa.enabled = false;
+
+    }
+
+    public void MenuPausaVolver()
+    {
+        MenuSFX.enabled = false;
+        Menu.enabled = false;
+        MenuPausa.enabled = true;
+    }
+
+    public void Muerte()
+    {
+
+    }
+
+    public void Victoria()
+    {
+
     }
 }
