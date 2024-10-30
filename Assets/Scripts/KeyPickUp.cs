@@ -49,15 +49,15 @@ public class KeyPickUp : MonoBehaviour
                 keyimage.SetActive(true);
                 keyistrue.SetActive(true);
                 textollave.gameObject.SetActive(false);
-
+                Destroy(gameObject);
                 bool added = inventory.AddItem(gameObject);
                 if (added)
                 {
                     Debug.Log("Objeto recogido: " + gameObject.name);
                 }
-                gameObject.SetActive(false);
+                
 
-                Destroy(gameObject);
+
             }
             else if (!textollave.gameObject.activeInHierarchy)
             {
