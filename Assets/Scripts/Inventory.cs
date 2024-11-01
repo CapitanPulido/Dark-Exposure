@@ -4,33 +4,33 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemData> allItems;            // Lista de todos los objetos disponibles
-    public List<GameObject> items;             // Lista de objetos en el inventario actual
-    public List<RawImage> inventorySlots;      // Referencia a los espacios en el Canvas
-    public int maxSlots = 10;                  // Número máximo de espacios en el inventario
-    public Transform handTransform;            // Punto donde el objeto se coloca en la mano del jugador
-    private GameObject equippedItem;           // Objeto actualmente en la mano
-    private GameObject selectedItem;           // Objeto seleccionado en el inventario
-    public Button equipButton;                 // Referencia al botón de equipar
-    public Button dropButton;                  // Referencia al botón de soltar
+    public List<GameObject> items; // Todos los objetos en el inventario
+    public List<GameObject> removableItems; // Objetos que se pueden sacar
+    public List<GameObject> nonRemovableItems; // Objetos que no se pueden sacar
+    public List<RawImage> inventorySlots; // Referencia a los espacios en el Canvas
+    public int maxSlots = 10; // Número máximo de espacios en el inventario
+    public Transform handTransform; // Punto donde el objeto se coloca en la mano del jugador
 
+    private GameObject equippedItem; // Objeto actualmente en la mano
+    private GameObject selectedItem; // Objeto seleccionado en el inventario
+
+    public Button equipButton; // Referencia al botón de equipar
+    public Button dropButton; // Referencia al botón de soltar
     public Canvas canvas;
 
     private void Start()
     {
-        items = new List<GameObject>(maxSlots); // Inicializa la lista de objetos en el inventario
+        items = new List<GameObject>(maxSlots);
+        
         canvas.enabled = false;
-
-        // Desactivar los botones al inicio
         equipButton.gameObject.SetActive(false);
         dropButton.gameObject.SetActive(false);
 
-        // Asignar los eventos a los botones
         equipButton.onClick.AddListener(EquipSelectedItem);
         dropButton.onClick.AddListener(DropSelectedItem);
     }
 
-    public void Update()
+    private void Update()
     {
         // Abrir y cerrar inventario al presionar "Tab"
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -47,9 +47,9 @@ public class Inventory : MonoBehaviour
         }
 
         // Detecta clic en un slot del inventario
-        if (canvas.enabled && (Input.GetMouseButtonDown(0)))
+        if (canvas.enabled && Input.GetMouseButtonDown(0))
         {
-            CheckInventoryClick(); // Pasa si es clic izquierdo
+            CheckInventoryClick();
         }
 
         // Soltar el objeto equipado al presionar "G"
@@ -58,13 +58,14 @@ public class Inventory : MonoBehaviour
             DropEquippedItem();
         }
 
-        // Lanzar el objeto equipado al presionar la rueda del raton
-        if(equippedItem != null && Input.GetMouseButtonDown(2))
+        // Lanzar el objeto equipado al presionar la rueda del ratón
+        if (equippedItem != null && Input.GetMouseButtonDown(2))
         {
             ThrowEquippedItem();
         }
     }
 
+    // Método para agregar un objeto al inventario y especificar si es removible
     public bool AddItem(GameObject item)
     {
         if (items.Count < maxSlots)
@@ -72,27 +73,23 @@ public class Inventory : MonoBehaviour
             items.Add(item); // Agrega el objeto a la lista
             item.SetActive(false); // Desactiva el objeto en el mundo
 
-            // Busca en allItems la textura asociada a este objeto
-            ItemData itemData = allItems.Find(data => data.prefab == item);
-            if (itemData != null)
+            // Obtén la textura desde el componente KeyPickUp
+            KeyPickUp keyPickUp = item.GetComponent<KeyPickUp>();
+            if (keyPickUp != null)
             {
-                // Encuentra el primer espacio vacío en el Canvas y asigna la textura del objeto
+                // Encuentra el primer espacio vacío en el Canvas y asigna la textura
                 for (int i = 0; i < inventorySlots.Count; i++)
                 {
-                    if (inventorySlots[i].texture == null) // Comprueba si el espacio está vacío
-                    {
-                        inventorySlots[i].texture = itemData.itemTexture; // Asigna la textura
+                    if (inventorySlots[i].texture == null)
+                    { // Comprueba si el espacio está vacío
+                        inventorySlots[i].texture = keyPickUp.keyimage; // Asigna la textura desde KeyPickUp
                         break;
                     }
                 }
-                Debug.Log("Objeto añadido al inventario: " + itemData.itemName);
-                return true;
             }
-            else
-            {
-                Debug.LogWarning("El objeto no se encuentra en la lista general de items.");
-                return false;
-            }
+
+            Debug.Log("Objeto añadido al inventario: " + keyPickUp.itemName);
+            return true;
         }
         else
         {
@@ -101,71 +98,30 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    // Método para remover un objeto, solo si está en removableItems
     public bool RemoveItem(GameObject item)
     {
-        int itemIndex = items.IndexOf(item);
-        if (itemIndex != -1)
+        if (removableItems.Contains(item))
         {
-            items.RemoveAt(itemIndex); // Remueve el objeto de la lista
-            item.SetActive(true); // Reactiva el objeto en el mundo
+            int itemIndex = items.IndexOf(item);
 
-            // Libera el espacio en el Canvas
-            inventorySlots[itemIndex].texture = null;
+            if (itemIndex != -1)
+            {
+                items.RemoveAt(itemIndex);
+                removableItems.Remove(item);
+                inventorySlots[itemIndex].texture = null;
 
-            Debug.Log("Objeto eliminado del inventario: " + item.name);
-            return true;
+                GameObject instance = Instantiate(item, handTransform.position, handTransform.rotation);
+             
+                Debug.Log("Objeto eliminado e instanciado en la posición de la mano: " + item.name);
+                return true;
+            }
         }
         else
         {
-            Debug.Log("El objeto no se encuentra en el inventario: " + item.name);
-            return false;
-        }
-    }
-
-
-    // Método para equipar un objeto desde el inventario
-    public bool EquipItem(GameObject item)
-    {
-        if (item != null)
-        {
-            equippedItem = item; // Asigna el objeto a la mano
-            items.Remove(item); // Remueve el objeto de la lista del inventario
-            int itemIndex = inventorySlots.FindIndex(slot => slot.texture != null && slot.texture == allItems.Find(data => data.prefab == item).itemTexture);
-            if (itemIndex != -1)
-            {
-                inventorySlots[itemIndex].texture = null; // Libera el espacio en el Canvas
-            }
-
-            equippedItem.SetActive(true); // Activa el objeto
-            equippedItem.transform.position = handTransform.position; // Posiciónalo en la mano
-            equippedItem.transform.parent = handTransform; // Haz que siga la mano
-
-            Debug.Log("Objeto equipado: " + item.name);
-            return true;
+            Debug.Log("Este objeto no se puede sacar del inventario: " + item.name);
         }
         return false;
-    }
-
-    private void DropEquippedItem()
-    {
-        if (equippedItem != null)
-        {
-            equippedItem.transform.parent = null; // Separa el objeto de la mano
-            equippedItem.SetActive(true); // Asegura que esté visible
-
-            // Posiciona el objeto en la posición del jugador
-            equippedItem.transform.position = transform.position + new Vector3(0, 0.5f, 0); // Ajusta la altura si es necesario
-
-            Rigidbody rb = equippedItem.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = false; // Asegúrate de que no sea kinemático
-                rb.AddForce(Camera.main.transform.forward * 5f, ForceMode.Impulse); // Aplica una fuerza para que caiga hacia adelante
-            }
-
-            Debug.Log("Objeto soltado: " + equippedItem.name);
-            equippedItem = null; // Libera el espacio de la mano
-        }
     }
 
     private void CheckInventoryClick()
@@ -212,27 +168,69 @@ public class Inventory : MonoBehaviour
         dropButton.gameObject.SetActive(false); // Desactiva el botón de soltar
     }
 
+    private void DropEquippedItem()
+    {
+        if (equippedItem != null)
+        {
+            equippedItem.transform.parent = null; // Separa el objeto de la mano
+            equippedItem.SetActive(true); // Asegura que esté visible
+
+            // Posiciona el objeto en la posición del jugador
+            equippedItem.transform.position = transform.position + new Vector3(0, 0.5f, 0); // Ajusta la altura si es necesario
+            Rigidbody rb = equippedItem.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+                rb.AddForce(Camera.main.transform.forward * 5f, ForceMode.Impulse); // Aplica una fuerza para que caiga hacia adelante
+            }
+
+            Debug.Log("Objeto soltado: " + equippedItem.name);
+            equippedItem = null; // Libera el espacio de la mano
+        }
+    }
+
     private void ThrowEquippedItem()
     {
         if (equippedItem != null)
         {
             equippedItem.transform.parent = null; // Separa el objeto de la mano
-            equippedItem.SetActive(true); // Asegúrate de que esté visible
+            equippedItem.SetActive(true); // Asegura que esté visible
 
             // Posiciona el objeto en la posición del jugador
             equippedItem.transform.position = transform.position + new Vector3(0, 0.5f, 0); // Ajusta la altura si es necesario
-
             Rigidbody rb = equippedItem.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.isKinematic = false; // Asegúrate de que no sea kinemático
-                                        // Lanza el objeto hacia adelante con una fuerza
-                Vector3 throwDirection = Camera.main.transform.forward; // Dirección en la que se ve la cámara
-                rb.AddForce(throwDirection * 50f, ForceMode.Impulse); // Ajusta la fuerza según sea necesario
+                rb.isKinematic = false;
+                rb.AddForce(Camera.main.transform.forward * 50f, ForceMode.Impulse); // Lanza el objeto hacia adelante
             }
 
             Debug.Log("Objeto lanzado: " + equippedItem.name);
             equippedItem = null; // Libera el espacio de la mano
         }
     }
+
+    public bool EquipItem(GameObject item)
+    {
+        if (item != null)
+        {
+            equippedItem = item; // Asigna el objeto a la mano
+            items.Remove(item); // Remueve el objeto de la lista del inventario
+
+            // Encuentra y libera el espacio en el Canvas
+            int itemIndex = items.IndexOf(item);
+            if (itemIndex != -1)
+            {
+                inventorySlots[itemIndex].texture = null;
+            }
+
+            equippedItem.SetActive(true); // Activa el objeto
+            equippedItem.transform.position = handTransform.position; // Posiciónalo en la mano
+            equippedItem.transform.parent = handTransform; // Haz que siga la mano
+            Debug.Log("Objeto equipado: " + item.name);
+            return true;
+        }
+        return false;
+    }
 }
+

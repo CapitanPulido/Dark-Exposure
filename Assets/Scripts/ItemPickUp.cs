@@ -24,16 +24,16 @@ public class PickUpItem : MonoBehaviour
 
         }
     }
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isplayer)
-        {
-            bool added = inventory.AddItem(gameObject);
-            if (added)
-            {
-                Debug.Log("Objeto recogido: " + gameObject.name);
-            }
-            gameObject.SetActive(false);
-        }
-    }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Mouse0) && isplayer)
+    //    {
+    //        bool added = inventory.AddItem(gameObject);
+    //        if (added)
+    //        {
+    //            Debug.Log("Objeto recogido: " + gameObject.name);
+    //        }
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 }
