@@ -12,6 +12,10 @@ public class Ritual : MonoBehaviour
     public GameObject istrue;
     public bool isplayer;
     Animator animator;
+
+    bool activado;
+    public Ritualmaestro ritualmaestro;
+
     void Start()
     {
         isplayer = false;
@@ -45,10 +49,12 @@ public class Ritual : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                if (istrue.activeInHierarchy)
+                if (istrue.activeInHierarchy && !activado)
                 {
                     hand.SetActive(false);
                     animator.enabled = true;
+                    activado = true;
+                    ritualmaestro.activados++;
                 }
                 else if (!showpiecemissingUI.activeInHierarchy)
                 {
