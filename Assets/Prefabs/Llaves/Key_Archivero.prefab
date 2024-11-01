@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5719934431266982964
+--- !u!1 &2168389514100042857
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7511780321619394824}
-  - component: {fileID: 76784022029919955}
-  - component: {fileID: 6091538546874059024}
-  - component: {fileID: 3550482457349653118}
-  - component: {fileID: 5508851475183472685}
+  - component: {fileID: 6835753790405328165}
+  - component: {fileID: 4810260420811466824}
+  - component: {fileID: 6786941447372692287}
+  - component: {fileID: 7736285518275997563}
+  - component: {fileID: 7729009084628567355}
   m_Layer: 0
   m_Name: Key_Archivero
   m_TagString: Untagged
@@ -20,37 +20,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7511780321619394824
+--- !u!4 &6835753790405328165
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719934431266982964}
+  m_GameObject: {fileID: 2168389514100042857}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.156801, y: -0.6544162, z: -2.3149586}
   m_LocalScale: {x: 1.8736037, y: 0.0634187, z: 2.2435143}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8074519578466296082}
+  - {fileID: 584922585732310939}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &76784022029919955
+--- !u!33 &4810260420811466824
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719934431266982964}
+  m_GameObject: {fileID: 2168389514100042857}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6091538546874059024
+--- !u!23 &6786941447372692287
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719934431266982964}
+  m_GameObject: {fileID: 2168389514100042857}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3550482457349653118
+--- !u!65 &7736285518275997563
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719934431266982964}
+  m_GameObject: {fileID: 2168389514100042857}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,13 +107,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5508851475183472685
+--- !u!114 &7729009084628567355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719934431266982964}
+  m_GameObject: {fileID: 2168389514100042857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4c92900a35ae664193133a02fa5ccca, type: 3}
@@ -125,7 +125,7 @@ MonoBehaviour:
   isplayer: 0
   texto: Archivero
   inventory: {fileID: 0}
---- !u!1 &6750625911966692793
+--- !u!1 &8514615455439550765
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,10 +133,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8074519578466296082}
-  - component: {fileID: 267194885684008487}
-  - component: {fileID: 3879002781302700259}
-  - component: {fileID: 7490271865822422628}
+  - component: {fileID: 584922585732310939}
+  - component: {fileID: 2796872907967969265}
+  - component: {fileID: 1819918086290311383}
+  - component: {fileID: 5240352346935798248}
   m_Layer: 0
   m_Name: kEY
   m_TagString: Untagged
@@ -144,36 +144,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8074519578466296082
+--- !u!4 &584922585732310939
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750625911966692793}
+  m_GameObject: {fileID: 8514615455439550765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0010673843, y: -0.12151392, z: 0.000891394}
   m_LocalScale: {x: 0.031717148, y: 0.08396509, z: 0.026487626}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7511780321619394824}
+  m_Father: {fileID: 6835753790405328165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &267194885684008487
+--- !u!33 &2796872907967969265
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750625911966692793}
+  m_GameObject: {fileID: 8514615455439550765}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3879002781302700259
+--- !u!23 &1819918086290311383
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750625911966692793}
+  m_GameObject: {fileID: 8514615455439550765}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -209,13 +209,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7490271865822422628
+--- !u!64 &5240352346935798248
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750625911966692793}
+  m_GameObject: {fileID: 8514615455439550765}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
