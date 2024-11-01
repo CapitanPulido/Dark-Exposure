@@ -848,11 +848,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &92447077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1079,6 +1081,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93f00d2b2b749984aaa36353667cd091, type: 3}
+--- !u!4 &172146261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8356657746300088472, guid: 93f00d2b2b749984aaa36353667cd091, type: 3}
+  m_PrefabInstance: {fileID: 152442381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &173402256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,16 +1649,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 268062077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &208389918 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 414311723176563155, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
-  m_PrefabInstance: {fileID: 879374106}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &209452962 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4030942104242508276, guid: 93f00d2b2b749984aaa36353667cd091, type: 3}
-  m_PrefabInstance: {fileID: 152442381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &237496598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,11 +2886,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99139273, y: 1, z: 21.262348}
   m_Center: {x: -0.47510925, y: 0, z: 9.319537}
---- !u!4 &651551495 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3603514326485571880, guid: 85012e1c95489854b9ddfae6a0964624, type: 3}
-  m_PrefabInstance: {fileID: 823196477}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &653375523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3341,6 +3333,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+--- !u!4 &750539375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7967404373628220064, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
+  m_PrefabInstance: {fileID: 1006492880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &768512438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16457998097d5e448b4b4729a786c61f, type: 3}
@@ -3372,6 +3369,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.010000004}
   m_Center: {x: -0.004802701, y: 4.656613e-10, z: 0.0000000023283064}
+--- !u!1 &817564660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6485108307307596479, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+  m_PrefabInstance: {fileID: 879374106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823196477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3694,11 +3696,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &839014138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4457,6 +4461,26 @@ PrefabInstance:
       propertyPath: textollave
       value: 
       objectReference: {fileID: 516707142}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: itemName
+      value: Carpeta
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: keyimage
+      value: 
+      objectReference: {fileID: 2800000, guid: 0366b5bace683734eb22f40a03c40a7a, type: 3}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 817564660}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     - target: {fileID: 9073451308134961195, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
       propertyPath: m_Name
       value: Carpeta
@@ -4681,6 +4705,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &942701759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6717839430554609399, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+  m_PrefabInstance: {fileID: 879374106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &944576212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4835,11 +4864,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &962546367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4914,11 +4945,6 @@ GameObject:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2547839116429255415, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
   m_PrefabInstance: {fileID: 2028013015}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &970276234 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2581617895237145245, guid: 1e060a4cb7b541346918001605187063, type: 3}
-  m_PrefabInstance: {fileID: 653375523}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &988399305
 GameObject:
@@ -5125,6 +5151,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
+--- !u!4 &1020693168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 251394507237813294, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
+  m_PrefabInstance: {fileID: 95020450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,6 +5326,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032857121}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1085831982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4508800557456209100, guid: 85012e1c95489854b9ddfae6a0964624, type: 3}
+  m_PrefabInstance: {fileID: 823196477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094834374
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,9 +6310,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1869462456}
     m_Modifications:
     - target: {fileID: 1876937415775532937, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
+      propertyPath: itemName
+      value: KeyConsultorio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876937415775532937, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
       propertyPath: keyimage
       value: 
-      objectReference: {fileID: 1500391994}
+      objectReference: {fileID: 2800000, guid: 0366b5bace683734eb22f40a03c40a7a, type: 3}
+    - target: {fileID: 1876937415775532937, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
     - target: {fileID: 1876937415775532937, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
       propertyPath: keyistrue
       value: 
@@ -6285,6 +6329,10 @@ PrefabInstance:
       propertyPath: textollave
       value: 
       objectReference: {fileID: 516707142}
+    - target: {fileID: 1876937415775532937, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
+      propertyPath: isRemovable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5814491648977957877, guid: 20bc8d0b12b35f44d8fbbc3aad139842, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7483797
@@ -6582,11 +6630,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &1448674896
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6666,12 +6716,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 970276234}
-  - {fileID: 651551495}
-  - {fileID: 208389918}
-  - {fileID: 1544000999}
-  - {fileID: 1779898805}
-  - {fileID: 209452962}
+  - {fileID: 942701759}
+  - {fileID: 750539375}
+  - {fileID: 1020693168}
+  - {fileID: 172146261}
+  - {fileID: 1587464242}
+  - {fileID: 1085831982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1500391994
@@ -6843,11 +6893,6 @@ Transform:
   - {fileID: 1905787092}
   m_Father: {fileID: 1559567949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1544000999 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3802427658520642253, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
-  m_PrefabInstance: {fileID: 1006492880}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549258534
 GameObject:
   m_ObjectHideFlags: 0
@@ -6990,6 +7035,11 @@ Transform:
   - {fileID: 1630695703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1587464242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1319219206476703834, guid: 1e060a4cb7b541346918001605187063, type: 3}
+  m_PrefabInstance: {fileID: 653375523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630695699
 GameObject:
   m_ObjectHideFlags: 0
@@ -7405,11 +7455,6 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
---- !u!4 &1779898805 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1975666944974300075, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
-  m_PrefabInstance: {fileID: 95020450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1791829450
 GameObject:
   m_ObjectHideFlags: 0
@@ -7464,11 +7509,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &1791829453
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9255,11 +9302,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyimage: {fileID: 899244946}
+  itemName: 
   textollave: {fileID: 516707142}
   keyistrue: {fileID: 1549258534}
   isplayer: 0
   texto: vela
   inventory: {fileID: 0}
+  isRemovable: 0
 --- !u!23 &2128944540
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9431,6 +9480,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 5393215579111688471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &135756641613575003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5430266925040683465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 5393215579111688471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962793677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde488cd31f5f8942bb929acaa6fbfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &208055562379803617
 MonoBehaviour:
   m_ObjectHideFlags: 0
