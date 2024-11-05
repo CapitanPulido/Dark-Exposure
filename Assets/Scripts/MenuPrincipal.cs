@@ -25,13 +25,11 @@ public class MenuPrincipal : MonoBehaviour
     public void Empezar()
     {
         SceneManager.LoadScene("");
+        Cursor.lockState = CursorLockMode.Locked; // Bloquea el cursor
+        Cursor.visible = false;
 
     }
 
-    public void Exit()
-    {
-
-    }
     public void SFX()
     {
         MenuSFX.enabled = true;

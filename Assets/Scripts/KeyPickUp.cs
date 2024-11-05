@@ -50,11 +50,35 @@ public class KeyPickUp : MonoBehaviour {
                 StartCoroutine(ShowKeydUI());
             }
         }
+
+        StartCoroutine(MeHagoPendejo());
     }
  
     IEnumerator ShowKeydUI() {
         textollave.text = texto;
         yield return new WaitForSeconds(timeToShowUI);
         textollave.gameObject.SetActive(false);
+    }
+
+    public void HaciendomePendejo()
+    {
+        Debug.Log("llevo toda la clase haciendome pendejo");
+    }
+
+    IEnumerator MeHagoPendejo()
+    {
+        Debug.Log("Cuando dejare de hacerme pendejo");
+
+        yield return new WaitForSeconds(2);
+
+        Debug.Log("Me sigo haciendo pendejo");
+
+        yield return new WaitForSeconds(2);
+
+        Debug.Log("porque me estoy haciendo pendejo");
+
+        yield return new WaitForSeconds(2);
+
+        Debug.Log("Ayudame ricardo me volver loco");
     }
 }
