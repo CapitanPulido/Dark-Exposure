@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    public Canvas Menu;
+
     public Canvas MenuSFX;
     // Start is called before the first frame update
     void Start()
     {
-        Menu.enabled = true;
 
+        Cursor.lockState = CursorLockMode.None;
         MenuSFX.enabled = false;
     }
 
@@ -24,7 +24,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Empezar()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Pruebas_Rick");
 
     }
 
