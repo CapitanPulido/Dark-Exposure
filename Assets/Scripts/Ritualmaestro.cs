@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ritualmaestro : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Ritualmaestro : MonoBehaviour
 
         if (activados == 6)
         {
-            image.SetActive(true);
+            SceneManager.LoadScene("Final");
         }
     }
 }

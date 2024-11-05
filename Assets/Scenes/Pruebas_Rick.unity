@@ -965,6 +965,18 @@ PrefabInstance:
       propertyPath: textollave
       value: 
       objectReference: {fileID: 516707142}
+    - target: {fileID: 8305254509673988791, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 8305254509673988791, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 448785603}
+    - target: {fileID: 8305254509673988791, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     - target: {fileID: 8501326896145440823, guid: f10e319709cdd0c4bb39d20d29396f03, type: 3}
       propertyPath: m_Name
       value: Tubo de ensayo
@@ -2941,6 +2953,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2809092566272597141, guid: 1e060a4cb7b541346918001605187063, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 2809092566272597141, guid: 1e060a4cb7b541346918001605187063, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 1549258534}
+    - target: {fileID: 2809092566272597141, guid: 1e060a4cb7b541346918001605187063, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     - target: {fileID: 5347982405173362912, guid: 1e060a4cb7b541346918001605187063, type: 3}
       propertyPath: m_Name
       value: Jueguete
@@ -3435,6 +3459,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bistury
       objectReference: {fileID: 0}
+    - target: {fileID: 8370196392045052374, guid: 85012e1c95489854b9ddfae6a0964624, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 8370196392045052374, guid: 85012e1c95489854b9ddfae6a0964624, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 39837550}
+    - target: {fileID: 8370196392045052374, guid: 85012e1c95489854b9ddfae6a0964624, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4458,6 +4494,18 @@ PrefabInstance:
       propertyPath: textollave
       value: 
       objectReference: {fileID: 516707142}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 1435148131}
+    - target: {fileID: 4340673700337817438, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     - target: {fileID: 9073451308134961195, guid: 4ff345c6afba04049ba6d48d84626914, type: 3}
       propertyPath: m_Name
       value: Carpeta
@@ -4918,6 +4966,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 2547839116429255415, guid: 71685b5814be93e4ab567ca5efda2038, type: 3}
   m_PrefabInstance: {fileID: 2028013015}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &983460580 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3499756034017790763, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
+  m_PrefabInstance: {fileID: 46208392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &988399305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5118,6 +5177,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7275257361981031768, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 135756641613575003}
+    - target: {fileID: 7275257361981031768, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
+      propertyPath: keyistrue
+      value: 
+      objectReference: {fileID: 844542119}
+    - target: {fileID: 7275257361981031768, guid: c5c64ac31d6e22842aacbc836cc8bfa9, type: 3}
+      propertyPath: textollave
+      value: 
+      objectReference: {fileID: 516707142}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5686,6 +5757,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 268062077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153999623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4133129470301053652, guid: 629c095a0f1c93f459b01381f1999363, type: 3}
+  m_PrefabInstance: {fileID: 46208392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1167575142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3530547118072630297, guid: 969e503f90633714f9eb5527162f3d92, type: 3}
@@ -9810,6 +9892,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5430266925040683465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: dropButton
+      value: 
+      objectReference: {fileID: 983460580}
+    - target: {fileID: 5430266925040683465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: equipButton
+      value: 
+      objectReference: {fileID: 1153999623}
     - target: {fileID: 5430266925040683465, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: allItems.Array.size
       value: 1

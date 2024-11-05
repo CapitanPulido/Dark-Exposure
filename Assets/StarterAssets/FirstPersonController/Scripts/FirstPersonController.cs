@@ -122,6 +122,9 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+	
 			_controller = GetComponent<CharacterController>();
 			animator = GetComponent<Animator>();
 			_input = GetComponent<StarterAssetsInputs>();
