@@ -30,7 +30,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Exit()
     {
-
+        Application.Quit();
     }
     public void SFX()
     {
