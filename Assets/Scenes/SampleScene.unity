@@ -3548,7 +3548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 1244923211}
-  MenuPausa: {fileID: 1641106657}
   MenuSFX: {fileID: 316089146}
 --- !u!4 &1446848861 stripped
 Transform:
