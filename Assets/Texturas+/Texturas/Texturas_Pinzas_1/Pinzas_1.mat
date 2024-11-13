@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Puertas_Dobles
+  m_Name: Pinzas_1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -29,11 +29,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 11c88a8c7b5a3104184aae4dd3e554a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 65152b77d0d8e494ebf2721b65435a52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: bfee8ee095acbc7439811c6912da041b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b271cea64cb5e604e9213dc6c07b5d52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -49,23 +49,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 336885b30afd21440a44d368b3374b6e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f75e07f3f33abbf44be95aabe08ce58c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 11c88a8c7b5a3104184aae4dd3e554a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 65152b77d0d8e494ebf2721b65435a52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: c930ce7bf7c4ab14380338be02b3037c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88484b277e69f494d9ceb2740648c96c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 3474ded3460f5414ba5f53eb9978ad3e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 45ffee8ed1662314b9ac9d7d39674e3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: fa557c90847415c4b93c951595879cdf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9b534374ed099de4faaf1f69141f0cf0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -122,7 +122,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &5602949313495021896
+--- !u!114 &2691310087517971820
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
