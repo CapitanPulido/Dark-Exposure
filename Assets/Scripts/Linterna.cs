@@ -14,7 +14,7 @@ public class Linterna : MonoBehaviour
 
     public AudioSource noenergy;
 
-    public bool Bateria = true;
+    public bool Bateria = true, audiobateria;
 
     
 
@@ -36,7 +36,7 @@ public class Linterna : MonoBehaviour
 
             }
 
-            else if (LuzLinterna.enabled == false)
+            else if (LuzLinterna.enabled == false && Bateria)
             {
                 LuzLinterna.enabled = true;
             }
@@ -52,21 +52,25 @@ public class Linterna : MonoBehaviour
         {
             LuzLinterna.enabled = false;
             Bateria = false;
-          
+            
         }
 
-        if (energiaActual <= energiaMinima)
+       
+
+        if (energiaActual == energiaMinima)
         {
-            noenergy.Play();
+            if(noenergy.isPlaying == false && audiobateria == false) 
+            {
+                noenergy.Play();
+                audiobateria = true;
+            }
+            
             Debug.Log("NO BITCHES");
         }
        
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
 
-        if (Input.GetKey("m"))
-        {
-            noenergy.Play();
-        }
+        
 
     }
 
@@ -76,4 +80,6 @@ public class Linterna : MonoBehaviour
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima); // Clampeo para no exceder el máximo
         Bateria = true;
     }
+
+    
 }

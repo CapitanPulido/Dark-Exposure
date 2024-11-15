@@ -14,16 +14,17 @@ public class PresionCardiaca : MonoBehaviour
   
 
     FirstPersonController Controller;
-    public Canvas DiedCanvas;
     public Canvas PressureCanvas;
     public RawImage PressureBlood;
     Color pressureColor = Color.white;
     public bool isEnemy = false;
 
+    Die died;
+
     public AudioSource Hearth;
     void Start()
     {
-        ActualPressure = 0;
+        ActualPressure = MinPressure;
         
 
     }
@@ -36,7 +37,7 @@ public class PresionCardiaca : MonoBehaviour
         if (ActualPressure >= 60)
         {
             Controller.enabled = false;
-            DiedCanvas.gameObject.SetActive(true);  
+            
 
         }
         pressureColor.a = ActualPressure;
@@ -54,6 +55,13 @@ public class PresionCardiaca : MonoBehaviour
             ActualPressure -= Time.deltaTime * Pressure;
             
         }
+
+        if (ActualPressure == MaxPressure)
+        {
+            died.Died();
+        }
+
+        Mathf.Clamp(ActualPressure, MaxPressure, MinPressure);
     }
 
     public void OnTriggerEnter(Collider collision)
