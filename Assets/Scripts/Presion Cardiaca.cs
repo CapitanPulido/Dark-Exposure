@@ -8,9 +8,10 @@ public class PresionCardiaca : MonoBehaviour
 {
     public Latido latido;
     public float MaxPressure;
-    public float MinPressure;
+    private float MinPressure = 0;
     public float ActualPressure;
     public float Pressure;
+    public float relax;
   
 
     FirstPersonController Controller;
@@ -18,6 +19,7 @@ public class PresionCardiaca : MonoBehaviour
     public RawImage PressureBlood;
     Color pressureColor = Color.white;
     public bool isEnemy = false;
+    public bool isSafe = true;
 
     Die died;
 
@@ -26,7 +28,6 @@ public class PresionCardiaca : MonoBehaviour
     {
         ActualPressure = MinPressure;
         
-
     }
 
    
@@ -34,7 +35,8 @@ public class PresionCardiaca : MonoBehaviour
     {
 
         ActualPressure = Mathf.Clamp(ActualPressure, MinPressure, MaxPressure);
-        if (ActualPressure >= 60)
+
+        if (ActualPressure >= 6)
         {
             Controller.enabled = false;
             
@@ -49,11 +51,17 @@ public class PresionCardiaca : MonoBehaviour
         {
             ActualPressure += Time.deltaTime * Pressure;
             latido.PLayPressure();
+            isSafe = false;
         }
         else
         {
-            ActualPressure -= Time.deltaTime * Pressure;
+            isSafe = true;
             
+        }
+
+        if(isSafe)
+        {
+            ActualPressure -= Time.deltaTime * relax;
         }
 
         if (ActualPressure == MaxPressure)
@@ -61,7 +69,7 @@ public class PresionCardiaca : MonoBehaviour
             died.Died();
         }
 
-        Mathf.Clamp(ActualPressure, MaxPressure, MinPressure);
+        
     }
 
     public void OnTriggerEnter(Collider collision)

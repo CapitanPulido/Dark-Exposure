@@ -1568,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780092818912293042, guid: 2c99ac595f407a34dbe51b38d7adfd2e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8273216711955230791, guid: 2c99ac595f407a34dbe51b38d7adfd2e, type: 3}
       propertyPath: m_Name
@@ -2923,6 +2923,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 0366b5bace683734eb22f40a03c40a7a, type: 3}
     - target: {fileID: 1266292304320916431, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: relax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266292304320916431, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: Hearth
       value: 
       objectReference: {fileID: 1717843691}
@@ -4191,7 +4195,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b62631bc6c9c1174daf877c599117e85, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5459,6 +5463,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1840330644277951708, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
+      propertyPath: m_Speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4035660542232199263, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
       propertyPath: enemy
       value: 
@@ -5578,6 +5586,10 @@ PrefabInstance:
     - target: {fileID: 9078646785509315417, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078646785509315417, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
