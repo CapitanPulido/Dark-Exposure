@@ -36,6 +36,7 @@ public class KeyPickUp : MonoBehaviour {
         if (isplayer) {
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
                 keyistrue.SetActive(true);
+                Destroy(gameObject);
                 textollave.gameObject.SetActive(false);
  
                 // Intenta añadir el objeto al inventario
@@ -43,11 +44,12 @@ public class KeyPickUp : MonoBehaviour {
                 
                 if (added) {
                     Debug.Log("Objeto recogido: " + itemName);
-                    Destroy(gameObject); // Destruye el objeto en el mundo después de recogerlo
+                     // Destruye el objeto en el mundo después de recogerlo
                 }
             } else if (!textollave.gameObject.activeInHierarchy) {
                 textollave.gameObject.SetActive(true);
                 StartCoroutine(ShowKeydUI());
+
             }
         }
 
