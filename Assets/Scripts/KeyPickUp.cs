@@ -13,7 +13,7 @@ public class KeyPickUp : MonoBehaviour {
     public string texto;
     Animator animator;
     public Inventory inventory; // Referencia al inventario
-    public bool isRemovable; // Indica si el objeto es removible o no
+
  
     void Start() {
         isplayer = false;
@@ -52,6 +52,8 @@ public class KeyPickUp : MonoBehaviour {
 
             }
         }
+
+        
     }
  
     IEnumerator ShowKeydUI() {
@@ -59,4 +61,5 @@ public class KeyPickUp : MonoBehaviour {
         yield return new WaitForSeconds(timeToShowUI);
         textollave.gameObject.SetActive(false);
     }
+    
 }

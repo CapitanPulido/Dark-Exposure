@@ -10,8 +10,9 @@ namespace StarterAssets
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
+    [RequireComponent(typeof(AudioSource))]
 #endif
-	public class FirstPersonController : MonoBehaviour
+    public class FirstPersonController : MonoBehaviour
 	{
         public float energiaActual;
         public float energiaMaxima;
@@ -23,7 +24,10 @@ namespace StarterAssets
 		public Slider bateria;
 		public bool ConBateria = true;
 
+        AudioSource source;
+        public AudioClip[] sounds;
 
+        public float volumen;
 
         [Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
@@ -407,4 +411,5 @@ namespace StarterAssets
 
 
 	}
+
 }

@@ -6,15 +6,17 @@ using UnityEngine;
 public class Linterna : MonoBehaviour
 {
     public Light LuzLinterna;
-    public GameObject camara;
+   
     public float energiaActual;
     public float energiaMaxima;
     public float energiaMinima;
     public float velocidaddeConsumo;
 
-    public bool Bateria = true;
+    public AudioSource noenergy;
 
-    public bool Bt = false;
+    public bool Bateria = true, audiobateria;
+
+    
 
 
     // Start is called before the first frame update
@@ -34,7 +36,7 @@ public class Linterna : MonoBehaviour
 
             }
 
-            else if (LuzLinterna.enabled == false)
+            else if (LuzLinterna.enabled == false && Bateria)
             {
                 LuzLinterna.enabled = true;
             }
@@ -46,23 +48,29 @@ public class Linterna : MonoBehaviour
 
         }
 
-        if (Bateria && LuzLinterna.enabled == false)
-        {
-           
-
-        }
-
         if (energiaActual <= 0)
         {
             LuzLinterna.enabled = false;
             Bateria = false;
+            
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+
+       
+
+        if (energiaActual == energiaMinima)
         {
-            RecargarBateria(energiaMaxima);
+            if(noenergy.isPlaying == false && audiobateria == false) 
+            {
+                noenergy.Play();
+                audiobateria = true;
+            }
+            
+            Debug.Log("NO BITCHES");
         }
+       
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima);
 
+        
 
     }
 
@@ -72,4 +80,6 @@ public class Linterna : MonoBehaviour
         energiaActual = Mathf.Clamp(energiaActual, energiaMinima, energiaMaxima); // Clampeo para no exceder el máximo
         Bateria = true;
     }
+
+    
 }
