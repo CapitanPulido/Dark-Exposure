@@ -35,7 +35,7 @@ namespace KeySystem
 
         public void PlayAnimation()
         {
-            if(_keyinventori.hasRedkey)
+            if (_keyinventori.hasRedkey)
             {
                 if (!doorOpen && !pauseInteraction)
                 {
