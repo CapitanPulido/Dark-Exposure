@@ -24,7 +24,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Empezar()
     {
-        SceneManager.LoadScene("Pruebas_Rick");
+        SceneManager.LoadScene("Intro");
 
     }
 
