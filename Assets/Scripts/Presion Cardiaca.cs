@@ -23,6 +23,7 @@ public class PresionCardiaca : MonoBehaviour
     public bool isEnemy = false;
     public bool isSafe = true;
     public float volumen;
+    public float volumen1;
     public AudioClip[] sounds;
 
     Die died;
@@ -73,27 +74,23 @@ public class PresionCardiaca : MonoBehaviour
 
         if (ActualPressure >= 250)
         {
-            Controller.enabled = false;
-            
 
+            died.Died();
         }
 
+        if (ActualPressure <=100 )
+        {
+            volumen = 1;
+        }
+
+        if ( ActualPressure >= 200)
+        {
+            volumen = 2;
+        }
         pressureColor.a = ActualPressure;
         PressureBlood.color = pressureColor;
         //Hearth.volume = ActualPressure;
         //Hearth.pitch = ActualPressure;
-
-        if (isEnemy) 
-        {
-            ActualPressure += Time.deltaTime * Pressure;
-            latido.PLayPressure();
-            isSafe = false;
-        }
-        else
-        {
-            isSafe = true;
-            
-        }
 
         if(isSafe)
         {
@@ -108,18 +105,21 @@ public class PresionCardiaca : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider collision)
+    public void OnTriggerStay(Collider collision)
     {
-        
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("EnemyRadio"))
         {
             isEnemy = true;
+            isSafe = false;
+            ActualPressure += Time.deltaTime * Pressure;
         }
 
-        else
-        {
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
             isEnemy = false;
-        }
+            isSafe = true;
     }
 
 
