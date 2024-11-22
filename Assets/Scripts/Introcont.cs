@@ -19,7 +19,7 @@ public class Introcont : MonoBehaviour
     IEnumerator contador()
     {
 
-        yield return new WaitForSeconds(51);
+        yield return new WaitForSeconds(47);
         SceneManager.LoadScene("Pruebas_Rick");
     }
 }
