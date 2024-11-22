@@ -20,7 +20,17 @@ public class MenuPrincipal : MonoBehaviour
     {
   
     }
+    public void Empezar1()
+    {
+        SceneManager.LoadScene("Pruebas_Rick");
 
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+
+    }
 
     public void Empezar()
     {
