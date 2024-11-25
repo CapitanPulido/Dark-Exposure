@@ -9,6 +9,8 @@ public class Die : MonoBehaviour
    
     public GameObject firstPerson;
     public GameObject Blood;
+    public ControlAudio CA;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +31,20 @@ public class Die : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Died();
+            Invoke("Died", 3);
+            Blood.SetActive(true);
+
+            CA.SFXMuerte();
+
+            Debug.Log("Moriste");
         }
     }
 
     public void Died()
     {
         Destroy(firstPerson);
-        Blood.SetActive(true);
-
-        Debug.Log("Moriste");
+        
     }
+
+
 }
