@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pausa : MonoBehaviour
 {
+    public GameObject Players, Pause;
+    //public Canvas Pause;
     private bool isPaused = false;
 
     // Update is called once per frame
@@ -22,6 +24,10 @@ public class Pausa : MonoBehaviour
     {
         Time.timeScale = 0f;
         isPaused = true;
+        Pause.SetActive(true);
+        Players.SetActive(false);
+
+        
 
         // Pause all audio
         AudioListener.pause = true;
@@ -31,6 +37,8 @@ public class Pausa : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+        Pause.SetActive(false);
+        Players.SetActive(true);
 
         // Resume all audio
         AudioListener.pause = false;
