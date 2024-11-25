@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Suelo
   - Object
+  - EnemyRadio
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - enemyLayer
   - detectionLayer
   - Item
-  - 
+  - Prefabs
   - 
   - 
   - 
