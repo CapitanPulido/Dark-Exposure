@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Member;
 
+[RequireComponent(typeof(AudioSource))]
 public class PresionCardiaca : MonoBehaviour
 {
     public Latido latido;
     public float MaxPressure;
-    public float MinPressure;
+    private float MinPressure = 0;
     public float ActualPressure;
     public float Pressure;
+    public float relax;
   
 
     FirstPersonController Controller;
@@ -18,42 +21,80 @@ public class PresionCardiaca : MonoBehaviour
     public RawImage PressureBlood;
     Color pressureColor = Color.white;
     public bool isEnemy = false;
+    public bool isSafe = true;
+    public float volumen;
+    public float volumen1;
+    public AudioClip[] sounds;
 
     Die died;
 
-    public AudioSource Hearth;
+    AudioSource Hearth;
+
     void Start()
     {
         ActualPressure = MinPressure;
         
 
+        if (Hearth == null)
+        {
+            ObtenerAudioSource();
+        }
     }
 
-   
-    void Update()
+    public void ObtenerAudioSource()
     {
+        Hearth = GetComponent<AudioSource>();
+
+        if (Hearth == null)
+        {
+            Debug.LogError("No se encontró el componente AudioSource en el GameObject.");
+            return;
+        }
+
+        // Configura el AudioSource como sonido 3D
+        Hearth.spatialBlend = 1.0f; // Hace que el sonido sea completamente 3D
+        Hearth.rolloffMode = AudioRolloffMode.Linear; // Cambia esto si deseas un tipo diferente de caída del volumen
+        Hearth.minDistance = 1f; // La distancia mínima a partir de la cual se escuchará el sonido
+        Hearth.maxDistance = 20f; // La distancia máxima a la que el sonido es audible
+    }
+    public void Musica()
+    {
+        int r = UnityEngine.Random.Range(0, sounds.Length);
+        Hearth.PlayOneShot(sounds[r], volumen);
+    }
+
+    public void Update()
+    {
+        if (!Hearth.isPlaying)
+        {
+            Musica();
+        }
 
         ActualPressure = Mathf.Clamp(ActualPressure, MinPressure, MaxPressure);
-        if (ActualPressure >= 60)
-        {
-            Controller.enabled = false;
-            
 
+        if (ActualPressure >= 250)
+        {
+
+            died.Died();
+        }
+
+        if (ActualPressure <=100 )
+        {
+            volumen = 1;
+        }
+
+        if ( ActualPressure >= 200)
+        {
+            volumen = 2;
         }
         pressureColor.a = ActualPressure;
         PressureBlood.color = pressureColor;
-        Hearth.volume = ActualPressure;
-        Hearth.pitch = ActualPressure;
+        //Hearth.volume = ActualPressure;
+        //Hearth.pitch = ActualPressure;
 
-        if (isEnemy) 
+        if(isSafe)
         {
-            ActualPressure += Time.deltaTime * Pressure;
-            latido.PLayPressure();
-        }
-        else
-        {
-            ActualPressure -= Time.deltaTime * Pressure;
-            
+            ActualPressure -= Time.deltaTime * relax;
         }
 
         if (ActualPressure == MaxPressure)
@@ -61,21 +102,24 @@ public class PresionCardiaca : MonoBehaviour
             died.Died();
         }
 
-        Mathf.Clamp(ActualPressure, MaxPressure, MinPressure);
+        
     }
 
-    public void OnTriggerEnter(Collider collision)
+    public void OnTriggerStay(Collider collision)
     {
-        
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("EnemyRadio"))
         {
             isEnemy = true;
+            isSafe = false;
+            ActualPressure += Time.deltaTime * Pressure;
         }
 
-        else
-        {
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
             isEnemy = false;
-        }
+            isSafe = true;
     }
 
 

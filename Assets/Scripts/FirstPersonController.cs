@@ -85,10 +85,14 @@ namespace StarterAssets
 		public Camera MainCamera, CameraVideo;
 		private bool boolCam;
         public Canvas inventario;
+		public AudioSource NoEnergy;
+		public AudioSource FindBatery;
+		public bool NoBatery;
 
 
 		bool CamChanged;
 		private bool crouched;
+
 		private Animator animator;
 
         public float timer = 0;
@@ -181,16 +185,31 @@ namespace StarterAssets
                     CamChanged = false;
                     ChangeCamera();
                 }
+
+				
             }
             if (boolCam)
             {
                 energiaActual -= Time.deltaTime * velocidaddeConsumo;
-                if (energiaActual <= 0f)
-                {
-                    ConBateria = false;
-                    camara.gameObject.SetActive(false);
-                    CameraVideo.gameObject.SetActive(false);
-                    MainCamera.gameObject.SetActive(true);
+				if (energiaActual <= 0f)
+				{
+					ConBateria = false;
+					camara.gameObject.SetActive(false);
+					CameraVideo.gameObject.SetActive(false);
+					MainCamera.gameObject.SetActive(true);
+				
+
+					if (!NoBatery)
+					{
+                        NoEnergy.Play();
+						Invoke("ChangeBateryValue", 3f);
+						
+                    }
+                    if (NoBatery)
+                    {
+                        FindBatery.Play();
+                    }
+
                 }
             }
 
@@ -206,6 +225,13 @@ namespace StarterAssets
             {
                 inventario.gameObject.SetActive(false);
             }
+
+			
+        }
+
+		public void ChangeBateryValue()
+		{
+            NoBatery = !NoBatery;
         }
 
         public void RecargarBateria()
