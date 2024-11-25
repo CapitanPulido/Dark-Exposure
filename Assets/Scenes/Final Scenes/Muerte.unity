@@ -470,7 +470,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 206809676}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: Exit
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -737,7 +737,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 206809676}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
-        m_MethodName: Empezar
+        m_MethodName: Empezar1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
