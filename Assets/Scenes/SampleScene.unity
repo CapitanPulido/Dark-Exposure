@@ -3784,6 +3784,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca051a47d2953884bafeefedfd3dd02c, type: 3}
   - {fileID: 8300000, guid: 4ba2ae4a416798e499957219323a4090, type: 3}
   volumen: 1
+  TimerAudio: 0
 --- !u!4 &1361922449
 Transform:
   m_ObjectHideFlags: 0
@@ -5829,7 +5830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840330644277951708, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
       propertyPath: m_Speed
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1989543987270668962, guid: 006a6cbdf2a71f44b896d98f34c9285b, type: 3}
       propertyPath: m_IsTrigger

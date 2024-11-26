@@ -9,6 +9,7 @@ public class ControlAudio : MonoBehaviour
     AudioSource source;
     public AudioClip[] sounds;
     public float volumen;
+    public float TimerAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,14 @@ public class ControlAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!source.isPlaying)
+        //if (!source.isPlaying)
+        //{
+        //    Musica();
+        //}
+        TimerAudio += Time.deltaTime;
+        if (TimerAudio > 300)
         {
+            TimerAudio = 0;
             Musica();
         }
     }
@@ -43,6 +50,11 @@ public class ControlAudio : MonoBehaviour
     public void Musica()
     {
         int r = UnityEngine.Random.Range(0, sounds.Length);
+        //if aux == r
+        /*
+         * regenero random
+         * 
+         */
         source.PlayOneShot(sounds[r], volumen);
     }
 
