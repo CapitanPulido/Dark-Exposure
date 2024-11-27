@@ -46,7 +46,7 @@ namespace KeySystem
                     }
                 }
             }
-            else;
+            else
             {
                 if(isCrosshairActive)
                 {

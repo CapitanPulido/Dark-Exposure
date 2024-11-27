@@ -46,7 +46,7 @@ public class ReproducirAudio : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             SeguirRuido();
-            enemy.MoveToRandomPoint();
+            //enemy.MoveToRandomPoint();
         }
     }
 
@@ -56,7 +56,7 @@ public class ReproducirAudio : MonoBehaviour
         Debug.Log("Moviendo");
 
         yield return new WaitForSeconds(3);
-        enemy.MoveToRandomPoint();
+        //enemy.MoveToRandomPoint();
     }
 }
 
