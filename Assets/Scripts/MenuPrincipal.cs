@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
 
-    public Canvas MenuSFX;
+    //public Canvas MenuSFX;
     // Start is called before the first frame update
     void Start()
     {
 
         Cursor.lockState = CursorLockMode.None;
-        MenuSFX.enabled = false;
+        //MenuSFX.enabled = false;
     }
 
     // Update is called once per frame
@@ -38,13 +38,19 @@ public class MenuPrincipal : MonoBehaviour
 
     }
 
+    public void Menep()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+
+    }
+
     public void Exit()
     {
         Application.Quit();
     }
     public void SFX()
     {
-        MenuSFX.enabled = true;
+        //MenuSFX.enabled = true;
 
     }
 
