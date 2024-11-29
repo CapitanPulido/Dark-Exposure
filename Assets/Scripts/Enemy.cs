@@ -24,9 +24,11 @@ public class Enemy : MonoBehaviour
     public AudioClip[] sounds;
 
     public float volumen;
-    public Animator animator;
+    //public Animator animator;
 
-
+    public GameObject Correr;
+    public GameObject Caminar;
+    public GameObject Idle;
 
     public void Start()
     {
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
                 return;
             }
 
-            animator = GetComponent<Animator>();
+            //animator = GetComponent<Animator>();
         }
 
         //waitTimer = waitTime;
@@ -98,22 +100,47 @@ public class Enemy : MonoBehaviour
 
             isChasingPlayer = false;
 
-            if (!agent.pathPending && agent.remainingDistance < 1f)
+            if (!agent.pathPending && agent.remainingDistance < 2f)
             {
                 if (waitTimer <= 0)
                 {
                     MoveToRandomPoint();
                     waitTimer = waitTime;
+                    agent.speed = 10f;
                 }
                 else
                 {
+                    agent.speed = 0f;
                     waitTimer -= Time.deltaTime;
                 }
             }
 
         }
 
+
+        if (agent.speed == 0f)
+        {
+            Idle.SetActive(true);
+            Correr.SetActive(false);
+            Caminar.SetActive(false);
+        }
+
+        if (agent.speed > 0f  && agent.speed <= 10)
+        {
+            Idle.SetActive(false);
+            Correr.SetActive(false);
+            Caminar.SetActive(true);
+        }
+
+        if(agent.speed > 10)
+        {
+            Idle.SetActive(false);
+            Correr.SetActive(true);
+            Caminar.SetActive(false);
+        }
     }
+
+
 
     public void MoveToRandomPoint()
     {
@@ -132,11 +159,13 @@ public class Enemy : MonoBehaviour
         //Actualiza el destino del agente
         agent.SetDestination(hit.position);
         lastDestination = hit.position;
+        
     }
     public void MoveToPlayerPosition()
     {
         isChasingPlayer = true;
         agent.SetDestination(player.position);
+        agent.speed = 15;
     }
 
     private void OnTriggerEnter(Collider collision)
