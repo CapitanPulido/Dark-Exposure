@@ -63,7 +63,7 @@ public class DoorscriptArchivero : MonoBehaviour
     IEnumerator ShowDoorLockedUI()
     {
         showDoorLockedUI.SetActive(true);
-        textoPuerta.text = "Find the key for door 7u7";
+        textoPuerta.text = "Find the key for Operating room";
         yield return new WaitForSeconds(timeToShowUI);
         showDoorLockedUI.SetActive(false);
     }

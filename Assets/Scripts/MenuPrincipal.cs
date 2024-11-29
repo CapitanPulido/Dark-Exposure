@@ -23,12 +23,14 @@ public class MenuPrincipal : MonoBehaviour
     public void Empezar1()
     {
         SceneManager.LoadScene("Pruebas_Rick");
+        Time.timeScale = 1f;
 
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("MenuPrincipal");
+        Time.timeScale = 1f;
 
     }
 
@@ -40,6 +42,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Menep()
     {
+        Time.timeScale = 1f;
+
         SceneManager.LoadScene("MenuPrincipal");
 
     }
@@ -53,5 +57,7 @@ public class MenuPrincipal : MonoBehaviour
         //MenuSFX.enabled = true;
 
     }
+
+
 
 }

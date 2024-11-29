@@ -34,7 +34,7 @@ public class Pausa : MonoBehaviour
         AudioListener.pause = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f;
         isPaused = false;
