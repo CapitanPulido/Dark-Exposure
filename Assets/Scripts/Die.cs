@@ -1,7 +1,9 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Die : MonoBehaviour
 {
@@ -10,12 +12,14 @@ public class Die : MonoBehaviour
     public GameObject firstPerson;
     public GameObject Blood;
     public ControlAudio CA;
+    public Canvas muerte;
     
 
     // Start is called before the first frame update
     void Start()
     {
         Blood.SetActive(false);
+        muerte.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,6 +48,13 @@ public class Die : MonoBehaviour
     {
         Destroy(firstPerson);
         
+    }
+
+    IEnumerator Muerte()
+    {
+        muerte.gameObject.SetActive(true);  
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Muerte");
     }
 
 

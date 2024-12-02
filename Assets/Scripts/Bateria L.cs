@@ -5,44 +5,54 @@ using UnityEngine;
 
 public class BateriaL : MonoBehaviour
 {
+    public Linterna Linterna;
+    public GameObject hand;
+    public bool isPlayer;
 
-    FirstPersonController controller;
-
-    public float NumMaxUsos;
-    public float NumMinUsos;
-    public float NumActualUsos;
-
-    public bool TienesBaterias = false;
-
-    // Start is called before the first frame update
     void Start()
     {
-        NumActualUsos = 0;
+        isPlayer = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        NumActualUsos = Mathf.Clamp(NumActualUsos, NumMinUsos, NumMaxUsos);
-
-        if (NumActualUsos >= 0)
+        if (isPlayer && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            TienesBaterias = false;
-        }
-       
-    }
+            hand.SetActive(false);
+            StartCoroutine(Destroy());
 
-    public void Bateria()
-    {
-       if (TienesBaterias)
-        {
-            controller.RecargarBateria();
-            NumActualUsos -= 1;
         }
     }
 
-    public void ObtuvisteBateria()
+    public void Bateria(float cantidad)
     {
-        NumActualUsos += 1;
+        Linterna.RecargarBateria(cantidad);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayer = true;
+            hand.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayer = false;
+            hand.SetActive(false);
+        }
+    }
+
+    IEnumerator Destroy()
+    {
+        Bateria(100); // Puedes ajustar la cantidad que recarga
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }
+
+

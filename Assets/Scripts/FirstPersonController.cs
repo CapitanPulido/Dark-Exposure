@@ -246,11 +246,10 @@ namespace StarterAssets
 
         public void RecargarBateria()
         {
-            if (Bateria == false)
-            {
+            
                 energiaActual += energiaMaxima;
                 Bateria = true;
-            }
+   
         }
 
         private void LateUpdate()

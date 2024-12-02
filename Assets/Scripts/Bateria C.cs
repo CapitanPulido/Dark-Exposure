@@ -1,10 +1,11 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BateriaC : MonoBehaviour
 {
-    public Linterna linterna;
+    public FirstPersonController FirstPersonController;
     public GameObject hand;
     public bool isPlayer;
 
@@ -23,9 +24,9 @@ public class BateriaC : MonoBehaviour
         }
     }
 
-    public void Bateria(float cantidad)
+    public void Bateria()
     {
-        linterna.RecargarBateria(cantidad);
+        FirstPersonController.RecargarBateria();
     }
 
     void OnTriggerEnter(Collider other)
@@ -48,7 +49,7 @@ public class BateriaC : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        Bateria(100); // Puedes ajustar la cantidad que recarga
+        Bateria();
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
