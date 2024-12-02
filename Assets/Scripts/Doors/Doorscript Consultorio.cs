@@ -64,7 +64,7 @@ public class DoorscriptConsultorio : MonoBehaviour
     IEnumerator ShowDoorLockedUI()
     {
         showDoorLockedUI.SetActive(true);
-        textoPuerta.text = "Find the key for Consultorio";
+        textoPuerta.text = "Find the key for Medical Office";
         yield return new WaitForSeconds(timeToShowUI);
         showDoorLockedUI.SetActive(false);
     }

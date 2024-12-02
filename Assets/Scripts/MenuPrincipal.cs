@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
 
-    public Canvas MenuSFX;
+    //public Canvas MenuSFX;
     // Start is called before the first frame update
     void Start()
     {
 
         Cursor.lockState = CursorLockMode.None;
-        MenuSFX.enabled = false;
+        //MenuSFX.enabled = false;
     }
 
     // Update is called once per frame
@@ -23,12 +23,14 @@ public class MenuPrincipal : MonoBehaviour
     public void Empezar1()
     {
         SceneManager.LoadScene("Pruebas_Rick");
+        Time.timeScale = 1f;
 
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("MenuPrincipal");
+        Time.timeScale = 1f;
 
     }
 
@@ -38,14 +40,24 @@ public class MenuPrincipal : MonoBehaviour
 
     }
 
+    public void Menep()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("MenuPrincipal");
+
+    }
+
     public void Exit()
     {
         Application.Quit();
     }
     public void SFX()
     {
-        MenuSFX.enabled = true;
+        //MenuSFX.enabled = true;
 
     }
+
+
 
 }

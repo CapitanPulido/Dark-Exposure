@@ -64,7 +64,7 @@ public class DoorscriptSotano : MonoBehaviour
     IEnumerator ShowDoorLockedUI()
     {
         showDoorLockedUI.SetActive(true);
-        textoPuerta.text = "Find the key for Baesment";
+        textoPuerta.text = "Find the key for Basement";
         yield return new WaitForSeconds(timeToShowUI);
         showDoorLockedUI.SetActive(false);
     }

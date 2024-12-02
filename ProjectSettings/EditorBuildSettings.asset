@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/Intro.unity
     guid: 725d0758196c9254eae11b5492a101d2
   - enabled: 1
-    path: Assets/Scenes/Pruebas_Rick.unity
+    path: Assets/Scenes/Final Scenes/Pruebas_Rick.unity
     guid: 94decb03e1dd9a7479b81d16203ab0cd
   - enabled: 1
     path: Assets/Scenes/Final Scenes/Final.unity

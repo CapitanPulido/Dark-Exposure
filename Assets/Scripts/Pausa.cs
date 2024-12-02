@@ -26,19 +26,22 @@ public class Pausa : MonoBehaviour
         isPaused = true;
         Pause.SetActive(true);
         Players.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
-        
 
         // Pause all audio
         AudioListener.pause = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f;
         isPaused = false;
         Pause.SetActive(false);
         Players.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
 
         // Resume all audio
         AudioListener.pause = false;
