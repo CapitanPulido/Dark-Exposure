@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Linterna : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Linterna : MonoBehaviour
     public AudioSource noenergy;
 
     public bool Bateria = true, audiobateria;
+    public Slider bateria;
 
     
 
@@ -22,12 +24,14 @@ public class Linterna : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bateria.maxValue = energiaMaxima;
+        bateria.minValue = energiaMinima;
     }
 
     // Update is called once per frame
     void Update()
     {
+        bateria.value = energiaActual;
         if (Input.GetKeyDown("f"))
         {
             if(LuzLinterna.enabled == true)

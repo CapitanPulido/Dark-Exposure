@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2769037386343296504}
   - component: {fileID: 110742386431514930}
   - component: {fileID: 2048403684198913776}
+  - component: {fileID: 4480994898283670206}
   m_Layer: 0
   m_Name: aros_carpeta
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4894199044789951063, guid: 40eb915a4c5602e44b819b17a06de430, type: 3}
+--- !u!208 &4480994898283670206
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912222163624786151}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.004, y: 0.004, z: 0.036000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

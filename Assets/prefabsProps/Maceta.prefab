@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1728190939091025788}
   - component: {fileID: 79078717016155355}
   - component: {fileID: 2652642481379040569}
+  - component: {fileID: 6087886175217536759}
   m_Layer: 0
   m_Name: Tierra
   m_TagString: Untagged
@@ -83,6 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &6087886175217536759
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259623639296681487}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.002, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.002, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4464958535216744318
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +145,7 @@ GameObject:
   - component: {fileID: 190712029130941628}
   - component: {fileID: 3299426012036557633}
   - component: {fileID: 7183431954747203705}
+  - component: {fileID: 713752926781294590}
   m_Layer: 0
   m_Name: Barro
   m_TagString: Untagged
@@ -222,3 +240,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3490870801714549182, guid: dbf2a0fd640a45d4baf0e88bbf7bde75, type: 3}
+--- !u!208 &713752926781294590
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194140215156991456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.015000001, y: 0.010000001, z: 0.015000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

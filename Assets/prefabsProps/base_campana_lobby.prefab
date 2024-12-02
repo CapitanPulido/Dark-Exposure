@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5005356412905704845}
   - component: {fileID: 7102860967073495367}
   - component: {fileID: 6096100270122034379}
+  - component: {fileID: 643899976279657300}
   m_Layer: 0
   m_Name: base_campana_lobby
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000003, y: 0.03756877, z: 0.020000003}
   m_Center: {x: 0.0000000013969839, y: 0.0087843845, z: -0.0000000018626451}
+--- !u!208 &643899976279657300
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760224867867465874}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.019000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.009000001, z: 0}
+  m_TimeToStationary: 0.5

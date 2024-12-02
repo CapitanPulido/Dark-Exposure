@@ -6,8 +6,12 @@ public class ControlAudio : MonoBehaviour
 {
     public AudioSource Muerte;
     public AudioSource Muerte2;
+    public AudioSource IAudio;
+    public AudioSource Surrar;
+    public AudioSource wnch;
     AudioSource source;
     public AudioClip[] sounds;
+   
     public float volumen;
     public float TimerAudio;
 
@@ -57,6 +61,7 @@ public class ControlAudio : MonoBehaviour
          */
         source.PlayOneShot(sounds[r], volumen);
     }
+    
 
     public void ObtenerAudioSource()
     {
@@ -73,5 +78,19 @@ public class ControlAudio : MonoBehaviour
         source.rolloffMode = AudioRolloffMode.Linear; // Cambia esto si deseas un tipo diferente de caída del volumen
         source.minDistance = 1f; // La distancia mínima a partir de la cual se escuchará el sonido
         source.maxDistance = 20f; // La distancia máxima a la que el sonido es audible
+    }
+
+    public void IncioAudio()
+    {
+        IAudio.Play();
+    }
+
+    public void Susurros()
+    {
+        Surrar.Play();
+    }
+    public void WNCH()
+    {
+        wnch.Play();
     }
 }

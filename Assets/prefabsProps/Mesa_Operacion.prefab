@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 3816874840409248922}
   - component: {fileID: 998312320142675446}
   - component: {fileID: 9223024563832934547}
+  - component: {fileID: 1175283386299340405}
   m_Layer: 0
   m_Name: Base_Plastico1
   m_TagString: Untagged
@@ -149,6 +150,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.01}
   m_Center: {x: -0.0000019073486, y: 0.000015258789, z: 0}
+--- !u!208 &1175283386299340405
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666343077014552640}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2899755780684959467
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +178,7 @@ GameObject:
   - component: {fileID: 3878306832183262087}
   - component: {fileID: 5695998995259507579}
   - component: {fileID: 862011310736487302}
+  - component: {fileID: 3745912690245919637}
   m_Layer: 0
   m_Name: Cuadro_Metal
   m_TagString: Untagged
@@ -254,6 +272,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: -0.0000076293945, y: 0.0000076293945, z: 0.0000076293945}
+--- !u!208 &3745912690245919637
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899755780684959467}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3452334150842295666
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +300,7 @@ GameObject:
   - component: {fileID: 3899907999239571760}
   - component: {fileID: 3854372966822900189}
   - component: {fileID: 1718131989021225330}
+  - component: {fileID: 7898103686757924811}
   m_Layer: 0
   m_Name: Rueda4
   m_TagString: Untagged
@@ -359,6 +394,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000009, y: 0.020000001, z: 0.020000003}
   m_Center: {x: -0.000015257392, y: 7.940934e-23, z: -0.0000000018626449}
+--- !u!208 &7898103686757924811
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452334150842295666}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4153404579761794514
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +422,7 @@ GameObject:
   - component: {fileID: 8132187991942720887}
   - component: {fileID: 9106151671076657277}
   - component: {fileID: 848706621815882980}
+  - component: {fileID: 8216733007204601048}
   m_Layer: 0
   m_Name: Base_Plastico4
   m_TagString: Untagged
@@ -464,6 +516,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.01}
   m_Center: {x: -0.0000019073486, y: 0.000015258789, z: 0}
+--- !u!208 &8216733007204601048
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153404579761794514}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4512245216784935498
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +544,7 @@ GameObject:
   - component: {fileID: 6113851289705434616}
   - component: {fileID: 251921875159100026}
   - component: {fileID: 5033645605368518125}
+  - component: {fileID: 4346484990573086122}
   m_Layer: 0
   m_Name: Cuadro_Hidraulico
   m_TagString: Untagged
@@ -569,6 +638,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01127726, y: 0.01, z: 0.011675194}
   m_Center: {x: -0.0000038146973, y: 0, z: 0.0000038146973}
+--- !u!208 &4346484990573086122
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512245216784935498}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.006, y: 0.0050000004, z: 0.006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4884349024519904035
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +666,7 @@ GameObject:
   - component: {fileID: 2122138533553036718}
   - component: {fileID: 6507386617892509467}
   - component: {fileID: 2619859956384146306}
+  - component: {fileID: 8975631749901394122}
   m_Layer: 0
   m_Name: Base_Plastico2
   m_TagString: Untagged
@@ -674,6 +760,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_Center: {x: -0.0000019073486, y: 0.000015258789, z: 0}
+--- !u!208 &8975631749901394122
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4884349024519904035}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5422707195815185979
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +788,7 @@ GameObject:
   - component: {fileID: 6212077198282195516}
   - component: {fileID: 7566429237430767485}
   - component: {fileID: 8826965156925026911}
+  - component: {fileID: 1357402248676900114}
   m_Layer: 0
   m_Name: Base_Metal1
   m_TagString: Untagged
@@ -779,6 +882,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010000002, y: 0.01, z: 0.01}
   m_Center: {x: -0.0000038139988, y: 0.000061035156, z: 0.0000009536743}
+--- !u!208 &1357402248676900114
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422707195815185979}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5673353883452811680
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +910,7 @@ GameObject:
   - component: {fileID: 7376154647262615949}
   - component: {fileID: 987968204756394352}
   - component: {fileID: 8325285010506370023}
+  - component: {fileID: 2840105817987352939}
   m_Layer: 0
   m_Name: Rueda3
   m_TagString: Untagged
@@ -884,6 +1004,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000009, y: 0.020000001, z: 0.020000003}
   m_Center: {x: 0.000015260186, y: 7.940934e-23, z: 0.000030515715}
+--- !u!208 &2840105817987352939
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5673353883452811680}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5803691568322770306
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +1032,7 @@ GameObject:
   - component: {fileID: 8403546266386332275}
   - component: {fileID: 7499940521244183404}
   - component: {fileID: 6803272317049655656}
+  - component: {fileID: 5282763588546483978}
   m_Layer: 0
   m_Name: Rueda2
   m_TagString: Untagged
@@ -989,6 +1126,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000009, y: 0.020000001, z: 0.020000003}
   m_Center: {x: -0.000015257392, y: -0.00012207031, z: 0.000030515715}
+--- !u!208 &5282763588546483978
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803691568322770306}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7868021965268811692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1154,7 @@ GameObject:
   - component: {fileID: 7108389705214580860}
   - component: {fileID: 1676358016836266439}
   - component: {fileID: 7270169625814491782}
+  - component: {fileID: 7828247162130927438}
   m_Layer: 0
   m_Name: Base_Plastico3
   m_TagString: Untagged
@@ -1094,6 +1248,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_Center: {x: -0.0000019073486, y: 0.000015258789, z: 0.0000076293945}
+--- !u!208 &7828247162130927438
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868021965268811692}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7984849824879978414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1276,7 @@ GameObject:
   - component: {fileID: 4783777371129445302}
   - component: {fileID: 1171186750310762736}
   - component: {fileID: 5568481674291937772}
+  - component: {fileID: 1105620970103844991}
   m_Layer: 0
   m_Name: Rueda
   m_TagString: Untagged
@@ -1199,6 +1370,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000009, y: 0.020000001, z: 0.020000003}
   m_Center: {x: -0.000015257392, y: 7.940934e-23, z: -0.0000000018626449}
+--- !u!208 &1105620970103844991
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984849824879978414}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8018223042394312556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1398,7 @@ GameObject:
   - component: {fileID: 8636896255547057657}
   - component: {fileID: 5409899869053888359}
   - component: {fileID: 2652817912726254985}
+  - component: {fileID: 2339572627984020881}
   m_Layer: 0
   m_Name: Base_Metal
   m_TagString: Untagged
@@ -1304,6 +1492,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009999999, y: 0.009999998, z: 0.009999999}
   m_Center: {x: -0.0000076293945, y: 0.000015258789, z: 0.0000038146973}
+--- !u!208 &2339572627984020881
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018223042394312556}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8142620515864551739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1520,7 @@ GameObject:
   - component: {fileID: 2858681758881950251}
   - component: {fileID: 120693076337805704}
   - component: {fileID: 6785623239616249107}
+  - component: {fileID: 6880850798038310235}
   m_Layer: 0
   m_Name: Base_Plastico
   m_TagString: Untagged
@@ -1409,3 +1614,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.01}
   m_Center: {x: -0.0000019073486, y: 0.000015258789, z: 0}
+--- !u!208 &6880850798038310235
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142620515864551739}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

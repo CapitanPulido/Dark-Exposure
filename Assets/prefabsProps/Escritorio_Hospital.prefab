@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 8320560236986731446}
   - component: {fileID: 640818228676500379}
   - component: {fileID: 7680128790408265547}
+  - component: {fileID: 1901648715332276008}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Untagged
@@ -147,6 +148,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4496885475859389300, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &1901648715332276008
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296684738797915954}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.007, z: 0.028}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2777179548307084096
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +176,7 @@ GameObject:
   - component: {fileID: 2111240802779018316}
   - component: {fileID: 6637819930260107835}
   - component: {fileID: 4945053847074148670}
+  - component: {fileID: 1257750475952286829}
   m_Layer: 0
   m_Name: Metal2
   m_TagString: Untagged
@@ -253,6 +271,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3484529583217265606, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &1257750475952286829
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777179548307084096}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.016, y: 0.007, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3880439963964865675
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +299,7 @@ GameObject:
   - component: {fileID: 69668405035133703}
   - component: {fileID: 4571094115754796494}
   - component: {fileID: 4728729267834446466}
+  - component: {fileID: 5548905990554492503}
   m_Layer: 0
   m_Name: Metal8
   m_TagString: Untagged
@@ -359,6 +394,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -589612558196676367, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &5548905990554492503
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880439963964865675}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.006, z: 0.011000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4848928348405695614
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +422,7 @@ GameObject:
   - component: {fileID: 5129836890266843380}
   - component: {fileID: 6976197299815455496}
   - component: {fileID: 5818562669654212209}
+  - component: {fileID: 3316361311179338767}
   m_Layer: 0
   m_Name: Metal1
   m_TagString: Untagged
@@ -465,6 +517,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 475420479020207847, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &3316361311179338767
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848928348405695614}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.016, y: 0.007, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5818884018287738915
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +545,7 @@ GameObject:
   - component: {fileID: 2402355708026076473}
   - component: {fileID: 5636936786272742744}
   - component: {fileID: 4770330926664677037}
+  - component: {fileID: 5988195309478972514}
   m_Layer: 0
   m_Name: Metal4
   m_TagString: Untagged
@@ -571,6 +640,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3478547984688681960, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &5988195309478972514
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818884018287738915}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.014, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6037898447481983489
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +668,7 @@ GameObject:
   - component: {fileID: 2076926979267627478}
   - component: {fileID: 6754725027337241167}
   - component: {fileID: 3703548665184886792}
+  - component: {fileID: 4721492891270584823}
   m_Layer: 0
   m_Name: Metal3
   m_TagString: Untagged
@@ -677,6 +763,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3033964381925893800, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &4721492891270584823
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037898447481983489}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.014, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6317094892351964743
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +791,7 @@ GameObject:
   - component: {fileID: 6996641649074315616}
   - component: {fileID: 7142762624992192931}
   - component: {fileID: 449378024760198593}
+  - component: {fileID: 5383727892965824510}
   m_Layer: 0
   m_Name: Metal5
   m_TagString: Untagged
@@ -783,6 +886,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3193920869186458357, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &5383727892965824510
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317094892351964743}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.014, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7027270386602780242
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +914,7 @@ GameObject:
   - component: {fileID: 129273028109486415}
   - component: {fileID: 7289321205357470116}
   - component: {fileID: 8230321347005054507}
+  - component: {fileID: 5837640743376047763}
   m_Layer: 0
   m_Name: Madera
   m_TagString: Untagged
@@ -889,6 +1009,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3005747034332017960, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &5837640743376047763
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7027270386602780242}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.017, y: 0.001, z: 0.029000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7911610398305909237
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +1037,7 @@ GameObject:
   - component: {fileID: 7034616525558226391}
   - component: {fileID: 4744369794304267073}
   - component: {fileID: 7037484359941383483}
+  - component: {fileID: 1347622418431110619}
   m_Layer: 0
   m_Name: Metal6
   m_TagString: Untagged
@@ -995,6 +1132,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5720834890428937551, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &1347622418431110619
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911610398305909237}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.001, y: 0.014, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8292443612846517261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1160,7 @@ GameObject:
   - component: {fileID: 4593777552660367004}
   - component: {fileID: 1547408914874436643}
   - component: {fileID: 6405732145206190434}
+  - component: {fileID: 7603555822710719381}
   m_Layer: 0
   m_Name: Metal7
   m_TagString: Untagged
@@ -1101,3 +1255,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3693518341095648873, guid: 4740c29cd6b01d043925c94ebafd9c12, type: 3}
+--- !u!208 &7603555822710719381
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8292443612846517261}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.015000001, y: 0.006, z: 0.001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

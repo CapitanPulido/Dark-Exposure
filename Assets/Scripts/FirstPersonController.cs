@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -23,8 +24,12 @@ namespace StarterAssets
 		public Canvas camara;
 		public Slider bateria;
 		public bool ConBateria = true;
+		public GameObject IAudio;
+		public GameObject Susurros;
+		public GameObject Wnch;
 
         AudioSource source;
+		public ControlAudio ca;
         public AudioClip[] sounds;
 
         public float volumen;
@@ -88,6 +93,7 @@ namespace StarterAssets
 		public AudioSource NoEnergy;
 		public AudioSource FindBatery;
 		public bool NoBatery;
+		public Slider BateriaCamara;
 
 
 		bool CamChanged;
@@ -150,6 +156,9 @@ namespace StarterAssets
 			bateria.minValue = Mathf.Clamp01(energiaMinima);
 			energiaActual = energiaMaxima;
             inventario.gameObject.SetActive(true);
+
+			BateriaCamara.maxValue = energiaMaxima;
+			BateriaCamara.minValue = energiaMinima;
         }
 
 		private void Update()
@@ -158,6 +167,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
 
+			
             /*
 			 * float timer = 0;
 			 * 
@@ -365,6 +375,8 @@ namespace StarterAssets
 				SprintSpeed = 6;
                 MoveSpeed = 4;
             }
+
+            BateriaCamara.value = energiaActual;
         }
 
 		private void JumpAndGravity()
@@ -435,7 +447,26 @@ namespace StarterAssets
 
 		}
 
+        public void OnTriggerEnter(Collider collision)
+        {
+          if(collision.gameObject.CompareTag("Inicio Audio"))
+			{
+				ca.IncioAudio();
+				Destroy(IAudio);
+			}
 
-	}
+            if (collision.gameObject.CompareTag("Susurros"))
+            {
+                ca.Susurros();
+                Destroy(Susurros);
+            }
+
+            if (collision.gameObject.CompareTag("WNCH"))
+            {
+                ca.WNCH();
+                Destroy(Wnch);
+            }
+        }
+    }
 
 }

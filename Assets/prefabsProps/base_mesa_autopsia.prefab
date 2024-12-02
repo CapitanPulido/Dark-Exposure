@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5066217065393573156}
   - component: {fileID: 7037480101904038382}
   - component: {fileID: 1814521901278191375}
+  - component: {fileID: 9033336332247662701}
   m_Layer: 0
   m_Name: base_mesa_autopsia
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020503324, y: 0.41073516, z: 0.020503325}
   m_Center: {x: 9.313225e-10, y: 0.19536759, z: -0.0000000013969838}
+--- !u!208 &9033336332247662701
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839117659081611323}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.20500001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.19500001, z: 0}
+  m_TimeToStationary: 0.5

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1023522342788944525}
   - component: {fileID: 3013118622220199495}
   - component: {fileID: 8322032434524330023}
+  - component: {fileID: 4295615386795413926}
   m_Layer: 0
   m_Name: Cafetera
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1524828754045304598, guid: a31579079be4c4b4c97fd787852bb225, type: 3}
+--- !u!208 &4295615386795413926
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661500284609431442}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.019000001, y: 1.065, z: 0.013}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.006, y: 0.592, z: 0}
+  m_TimeToStationary: 0.5

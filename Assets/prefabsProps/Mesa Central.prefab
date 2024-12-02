@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8060673897377618336}
   - component: {fileID: 5204388181598023018}
   - component: {fileID: 8540194133603492758}
+  - component: {fileID: 8896459799009954773}
   m_Layer: 0
   m_Name: Mesa Central
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01179733, y: 0.011816613, z: 0.0117973285}
   m_Center: {x: -0.000000003259629, y: 0.00026232284, z: -9.313225e-10}
+--- !u!208 &8896459799009954773
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996911283520900287}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.006, y: 0.006, z: 0.006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5602112100579013788}
   - component: {fileID: 6443255875622720959}
   - component: {fileID: 8954675282892401045}
+  - component: {fileID: 2975331914103710319}
   m_Layer: 0
   m_Name: Arco_1
   m_TagString: Untagged
@@ -106,6 +107,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7991323189744491998, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &2975331914103710319
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024322462942013711}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.027, y: 0.0050000004, z: 0.058000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.024, y: 0, z: -0.043}
+  m_TimeToStationary: 0.5
 --- !u!1 &2327317568203449647
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +135,7 @@ GameObject:
   - component: {fileID: 8339039681325537027}
   - component: {fileID: 5619773391381801082}
   - component: {fileID: 1209854036259824319}
+  - component: {fileID: 8994384047628659574}
   m_Layer: 0
   m_Name: Arco_2
   m_TagString: Untagged
@@ -212,6 +230,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6842795970799472245, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &8994384047628659574
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327317568203449647}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.038000003, y: 0.0050000004, z: 0.058000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.013, y: 0, z: -0.043}
+  m_TimeToStationary: 0.5
 --- !u!1 &2505410665520596909
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +258,7 @@ GameObject:
   - component: {fileID: 9059253681534301009}
   - component: {fileID: 2061956624995434491}
   - component: {fileID: 7968396724439816842}
+  - component: {fileID: 1040016340362076933}
   m_Layer: 0
   m_Name: pCylinder2
   m_TagString: Untagged
@@ -318,6 +353,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6099800089077584851, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &1040016340362076933
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2505410665520596909}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3047766139249838180
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +381,7 @@ GameObject:
   - component: {fileID: 6513248763302213036}
   - component: {fileID: 2248484129261241681}
   - component: {fileID: 5477269343090255904}
+  - component: {fileID: 3224317386110655282}
   m_Layer: 0
   m_Name: Barrote_4
   m_TagString: Untagged
@@ -424,6 +476,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -313107712531127977, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &3224317386110655282
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047766139249838180}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3062405499518189101
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +504,7 @@ GameObject:
   - component: {fileID: 5055159809237219892}
   - component: {fileID: 3782994383815888454}
   - component: {fileID: 3092064199679849928}
+  - component: {fileID: 7596313637196794841}
   m_Layer: 0
   m_Name: Barrote_1
   m_TagString: Untagged
@@ -530,6 +599,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1490185820457675795, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &7596313637196794841
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062405499518189101}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3072866884005552346
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +627,7 @@ GameObject:
   - component: {fileID: 5427546655856129036}
   - component: {fileID: 5882321200506536995}
   - component: {fileID: 7148237592992924461}
+  - component: {fileID: 8846816147622326783}
   m_Layer: 0
   m_Name: pCylinder1
   m_TagString: Untagged
@@ -636,6 +722,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5076798556035486163, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &8846816147622326783
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3072866884005552346}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3360470227507415015
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +750,7 @@ GameObject:
   - component: {fileID: 6565277969849721950}
   - component: {fileID: 6037321489640732475}
   - component: {fileID: 240538081693383896}
+  - component: {fileID: 7962546920318679087}
   m_Layer: 0
   m_Name: Almohada
   m_TagString: Untagged
@@ -742,6 +845,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8113558426105011885, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &7962546920318679087
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360470227507415015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.006, y: 0.008, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3564005072584506576
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +873,7 @@ GameObject:
   - component: {fileID: 416714686504661897}
   - component: {fileID: 6799266800867534720}
   - component: {fileID: 138517105698463868}
+  - component: {fileID: 525726660099856879}
   m_Layer: 0
   m_Name: Barrote_8
   m_TagString: Untagged
@@ -848,6 +968,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4798809396720852135, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &525726660099856879
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564005072584506576}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3858671079631031745
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +996,7 @@ GameObject:
   - component: {fileID: 8180244340921758112}
   - component: {fileID: 7878823236594203652}
   - component: {fileID: 1587677635805305601}
+  - component: {fileID: 7271744842680002968}
   m_Layer: 0
   m_Name: Barrote_2
   m_TagString: Untagged
@@ -954,6 +1091,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -834320067016006174, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &7271744842680002968
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858671079631031745}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3956504301322871580
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +1119,7 @@ GameObject:
   - component: {fileID: 6316478223844929943}
   - component: {fileID: 8374273983158414972}
   - component: {fileID: 7218465668255664586}
+  - component: {fileID: 3262402745521854674}
   m_Layer: 0
   m_Name: Barrote_6
   m_TagString: Untagged
@@ -1060,6 +1214,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7051332060116366790, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &3262402745521854674
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956504301322871580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5082959611828759970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1286,7 @@ GameObject:
   - component: {fileID: 1544425586792924173}
   - component: {fileID: 6800678954770740320}
   - component: {fileID: 4560978400236931940}
+  - component: {fileID: 26656221063396512}
   m_Layer: 0
   m_Name: Barrote_3
   m_TagString: Untagged
@@ -1210,6 +1381,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5257619375170930811, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &26656221063396512
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513224565056734494}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5856471187335616805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1443,7 @@ GameObject:
   - component: {fileID: 446055169042277289}
   - component: {fileID: 7966807411978925311}
   - component: {fileID: 9182808889066832298}
+  - component: {fileID: 3389848224389000450}
   m_Layer: 0
   m_Name: Barrote_5
   m_TagString: Untagged
@@ -1350,6 +1538,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6737060801238268424, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &3389848224389000450
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945191980448382135}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6969992896404166448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1566,7 @@ GameObject:
   - component: {fileID: 7852197398536580486}
   - component: {fileID: 1389117206130814539}
   - component: {fileID: 4320277029538635348}
+  - component: {fileID: 8046885659883077333}
   m_Layer: 0
   m_Name: Barrote_7
   m_TagString: Untagged
@@ -1456,6 +1661,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7242412152507120067, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &8046885659883077333
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969992896404166448}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7953487150069442063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1689,7 @@ GameObject:
   - component: {fileID: 443663408512316682}
   - component: {fileID: 2272496468316711861}
   - component: {fileID: 4896278192093906666}
+  - component: {fileID: 3265144118170989263}
   m_Layer: 0
   m_Name: Colchon
   m_TagString: Untagged
@@ -1562,6 +1784,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3235676462040880602, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &3265144118170989263
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7953487150069442063}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &9182057778405624587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1812,7 @@ GameObject:
   - component: {fileID: 4545606470987379143}
   - component: {fileID: 1283879291324795323}
   - component: {fileID: 9095755428823441522}
+  - component: {fileID: 2678341647189165743}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -1668,3 +1907,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3909233067320746374, guid: 1e1926a56548c5c4fb18b1910fa42606, type: 3}
+--- !u!208 &2678341647189165743
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182057778405624587}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

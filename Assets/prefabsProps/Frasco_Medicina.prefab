@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4303426189570061850}
   - component: {fileID: 3221812519651733661}
   - component: {fileID: 193885975919809626}
+  - component: {fileID: 9094445373591480122}
   m_Layer: 0
   m_Name: Tapa_Blanca
   m_TagString: Untagged
@@ -105,6 +106,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.033387825, z: 0.019021133}
   m_Center: {x: 4.656613e-10, y: 0.0067244293, z: -9.313226e-10}
+--- !u!208 &9094445373591480122
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821877640843183545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.017, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.007, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4494156974019101987
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +134,7 @@ GameObject:
   - component: {fileID: 6831638476260841403}
   - component: {fileID: 3612120258470510820}
   - component: {fileID: 4722404507993273564}
+  - component: {fileID: 1793919376364036423}
   m_Layer: 0
   m_Name: Bote_Naranja
   m_TagString: Untagged
@@ -210,6 +228,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.023317302, y: 0.02, z: 0.02217607}
   m_Center: {x: 4.6566126e-10, y: 0.0000076293945, z: -4.6566126e-10}
+--- !u!208 &1793919376364036423
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4494156974019101987}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.012, y: 0.010000001, z: 0.011000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5045471277072206558
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +256,7 @@ GameObject:
   - component: {fileID: 534083314936108525}
   - component: {fileID: 2589980842611618830}
   - component: {fileID: 2864874245379183819}
+  - component: {fileID: 4963811305764112477}
   m_Layer: 0
   m_Name: Etiqueta
   m_TagString: Untagged
@@ -315,6 +350,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.031366672, y: 0.010005968, z: 0.009999999}
   m_Center: {x: 0.012731973, y: -0.000007668277, z: 0}
+--- !u!208 &4963811305764112477
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045471277072206558}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.016, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.013, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6087274482483143461
 GameObject:
   m_ObjectHideFlags: 0

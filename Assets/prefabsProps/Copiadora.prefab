@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8063757983696724415}
   - component: {fileID: 4926494810385945219}
   - component: {fileID: 7908692776407211959}
+  - component: {fileID: 1182691552839917336}
   m_Layer: 0
   m_Name: pCylinder1
   m_TagString: Untagged
@@ -106,6 +107,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5076798556035486163, guid: be778de08001cf543899c916ca67f431, type: 3}
+--- !u!208 &1182691552839917336
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707504787586716133}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8782399613846077655
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +171,7 @@ GameObject:
   - component: {fileID: 5347735409462445628}
   - component: {fileID: 3716339850834576125}
   - component: {fileID: 7103240877745472515}
+  - component: {fileID: 7478973869147317986}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -310,3 +328,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0013281701, y: 0.12723985, z: 0.0088844495}
   m_Center: {x: 0.0022052564, y: -0.06322173, z: -0.00055777415}
+--- !u!208 &7478973869147317986
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005525406962555093}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.006, y: 0.101, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.003, y: -0.026, z: 0}
+  m_TimeToStationary: 0.5

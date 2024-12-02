@@ -14,6 +14,7 @@ public class PresionCardiaca : MonoBehaviour
     public float ActualPressure;
     public float Pressure;
     public float relax;
+    public Slider press;
   
 
     FirstPersonController Controller;
@@ -26,7 +27,7 @@ public class PresionCardiaca : MonoBehaviour
     public float volumen1;
     public AudioClip[] sounds;
 
-    Die died;
+    public Die died;
 
     AudioSource Hearth;
 
@@ -39,6 +40,9 @@ public class PresionCardiaca : MonoBehaviour
         {
             ObtenerAudioSource();
         }
+
+        press.maxValue = MaxPressure;
+        press.minValue = MinPressure;
     }
 
     public void ObtenerAudioSource()
@@ -65,6 +69,20 @@ public class PresionCardiaca : MonoBehaviour
 
     public void Update()
     {
+        press.value = ActualPressure;
+        pressureColor.a = ActualPressure;
+        PressureBlood.color = pressureColor;
+        //Hearth.volume = ActualPressure;
+        //Hearth.pitch = ActualPressure;
+        if (isSafe)
+        {
+            ActualPressure -= Time.deltaTime * relax;
+        }
+
+        if (ActualPressure < 0)
+        {
+            ActualPressure = 0;
+        }
         if (!Hearth.isPlaying)
         {
             Musica();
@@ -78,24 +96,16 @@ public class PresionCardiaca : MonoBehaviour
             died.Died();
         }
 
-        if (ActualPressure <=100 )
+        if (ActualPressure <=10 )
         {
             volumen = 1;
         }
 
-        if ( ActualPressure >= 200)
+        if ( ActualPressure >= 20)
         {
             volumen = 2;
         }
-        pressureColor.a = ActualPressure;
-        PressureBlood.color = pressureColor;
-        //Hearth.volume = ActualPressure;
-        //Hearth.pitch = ActualPressure;
-
-        if(isSafe)
-        {
-            ActualPressure -= Time.deltaTime * relax;
-        }
+       
 
         if (ActualPressure == MaxPressure)
         {
@@ -116,10 +126,14 @@ public class PresionCardiaca : MonoBehaviour
 
     }
 
-    public void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider collision)
     {
+        if (collision.gameObject.CompareTag("EnemyRadio"))
+        {
             isEnemy = false;
             isSafe = true;
+        }
+           
     }
 
 

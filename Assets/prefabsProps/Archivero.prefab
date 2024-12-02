@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6411973642053789671}
   - component: {fileID: 9160074560150197037}
   - component: {fileID: 4499244080438803246}
+  - component: {fileID: 666820276861043563}
   m_Layer: 0
   m_Name: Archivero
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015638208, y: 0.068091914, z: 0.035526898}
   m_Center: {x: 9.313226e-10, y: 0, z: 0}
+--- !u!208 &666820276861043563
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214734957585363704}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.008, y: 0.034, z: 0.018000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

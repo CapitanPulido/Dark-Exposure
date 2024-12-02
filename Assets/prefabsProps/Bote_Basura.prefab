@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4455224607311005662}
   - component: {fileID: 8068096634384823448}
   - component: {fileID: 3775607809241632295}
+  - component: {fileID: 5072063517769494228}
   m_Layer: 0
   m_Name: Rueda
   m_TagString: Untagged
@@ -106,6 +107,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5658338536183748539, guid: 354e55310202cda4c91cb5cec7843a38, type: 3}
+--- !u!208 &5072063517769494228
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258938188222520262}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2768494696228112183
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +135,7 @@ GameObject:
   - component: {fileID: 8613926641119367133}
   - component: {fileID: 4481983938698987245}
   - component: {fileID: 18640336766991416}
+  - component: {fileID: 3454169627199376110}
   m_Layer: 0
   m_Name: Rueda1
   m_TagString: Untagged
@@ -212,6 +230,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1472711377272947281, guid: 354e55310202cda4c91cb5cec7843a38, type: 3}
+--- !u!208 &3454169627199376110
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768494696228112183}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3044466934661469004
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +258,7 @@ GameObject:
   - component: {fileID: 3113278063488912949}
   - component: {fileID: 7864996338437088904}
   - component: {fileID: 9125102186453020936}
+  - component: {fileID: 2760413944842024231}
   m_Layer: 0
   m_Name: Placa
   m_TagString: Untagged
@@ -318,6 +353,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 788771354194213302, guid: 354e55310202cda4c91cb5cec7843a38, type: 3}
+--- !u!208 &2760413944842024231
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3044466934661469004}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3912907121909141243
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +381,7 @@ GameObject:
   - component: {fileID: 3469986532273102081}
   - component: {fileID: 1711964910725486907}
   - component: {fileID: 5851273846388196905}
+  - component: {fileID: 7116943254602196248}
   m_Layer: 0
   m_Name: Bote
   m_TagString: Untagged
@@ -424,6 +476,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1024212901188704161, guid: 354e55310202cda4c91cb5cec7843a38, type: 3}
+--- !u!208 &7116943254602196248
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912907121909141243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8995299456237789845
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class EnemyRaycast : MonoBehaviour
                     // Detecta al jugador si no hay obstáculos en medio
                     Debug.DrawRay(transform.position, rayDirection * hit.distance, Color.red);
                     Debug.Log("Jugador detectado sin obstáculos: " + hit.collider.gameObject.name);
-                    //enemy.MoveToPlayerPosition();
+                    enemy.MoveToPlayerPosition();
                 }
                 else
                 {

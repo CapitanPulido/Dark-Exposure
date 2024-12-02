@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6969789044996004092}
   - component: {fileID: 685901691640138549}
   - component: {fileID: 5764018040672575822}
+  - component: {fileID: 6700642299868261986}
   m_Layer: 0
   m_Name: Sillon
   m_TagString: Untagged
@@ -141,6 +142,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2129278713788614704, guid: 93f081a407d0b95468924151ce4feed9, type: 3}
+--- !u!208 &6700642299868261986
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738348601094960118}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.008, y: 0.032, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.003, y: 0.024, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6908069624644687458
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +170,7 @@ GameObject:
   - component: {fileID: 2320082544850587241}
   - component: {fileID: 1035434204148103605}
   - component: {fileID: 1292752379284581871}
+  - component: {fileID: 5579486196986397278}
   m_Layer: 0
   m_Name: Recarga_brazos_DE1
   m_TagString: Untagged
@@ -247,6 +265,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5042150142900837802, guid: 93f081a407d0b95468924151ce4feed9, type: 3}
+--- !u!208 &5579486196986397278
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908069624644687458}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.037, y: 0.030000001, z: 0.003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7938075247985568292
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +293,7 @@ GameObject:
   - component: {fileID: 6663519403511477905}
   - component: {fileID: 6913781595149822980}
   - component: {fileID: 6767231814957315864}
+  - component: {fileID: 5138775325726739132}
   m_Layer: 0
   m_Name: Recarga_brazos_IZ1
   m_TagString: Untagged
@@ -353,6 +388,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1946171853783160913, guid: 93f081a407d0b95468924151ce4feed9, type: 3}
+--- !u!208 &5138775325726739132
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938075247985568292}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.037, y: 0.030000001, z: 0.003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7993998831483651922
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +416,7 @@ GameObject:
   - component: {fileID: 592018990995085734}
   - component: {fileID: 3426903374449553629}
   - component: {fileID: 3178481713769717566}
+  - component: {fileID: 1235315676708145752}
   m_Layer: 0
   m_Name: Respaldo1
   m_TagString: Untagged
@@ -459,3 +511,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2328985739939921131, guid: 93f081a407d0b95468924151ce4feed9, type: 3}
+--- !u!208 &1235315676708145752
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993998831483651922}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.046000004, y: 0.029000001, z: 0.025}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

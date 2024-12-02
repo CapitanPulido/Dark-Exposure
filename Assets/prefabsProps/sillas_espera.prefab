@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3602304034095736753}
   - component: {fileID: 1966582482347632945}
   - component: {fileID: 1871742366682477097}
+  - component: {fileID: 1651557442613404918}
   m_Layer: 0
   m_Name: sillas_espera
   m_TagString: Untagged
@@ -127,3 +128,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.31154406, y: 0.08233442, z: 0.014569491}
   m_Center: {x: 0, y: 0, z: -0.031363115}
+--- !u!208 &1651557442613404918
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097641047192503908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.156, y: 0.041, z: 0.039}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

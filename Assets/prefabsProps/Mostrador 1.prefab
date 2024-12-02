@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2592012842677406746}
   - component: {fileID: 8068755368954582941}
   - component: {fileID: 9040595098140233364}
+  - component: {fileID: 7421327297357426267}
   m_Layer: 0
   m_Name: Mostrador 1
   m_TagString: Untagged
@@ -149,3 +150,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010013672, y: 0.001234207, z: 0.012638988}
   m_Center: {x: 0.0000068354584, y: 0.0028143348, z: 0.0013194928}
+--- !u!208 &7421327297357426267
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336583361546272132}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.009000001, z: 0.006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.004, z: 0.001}
+  m_TimeToStationary: 0.5
