@@ -1,7 +1,6 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +9,7 @@ public class Die : MonoBehaviour
 
    
     public GameObject firstPerson;
-    public GameObject Blood;
+    //public GameObject Blood;
     public ControlAudio CA;
     public Canvas muerte;
     
@@ -18,7 +17,7 @@ public class Die : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Blood.SetActive(false);
+        //Blood.SetActive(false);
         muerte.gameObject.SetActive(false);
     }
 
@@ -37,7 +36,7 @@ public class Die : MonoBehaviour
         {
             CA.SFXMuerte();
             Invoke("Died", 0);
-            Blood.SetActive(true);
+            //Blood.SetActive(true);
 
             
 
