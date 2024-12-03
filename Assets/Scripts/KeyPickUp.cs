@@ -13,6 +13,7 @@ public class KeyPickUp : MonoBehaviour {
     public string texto;
     Animator animator;
     public Inventory inventory; // Referencia al inventario
+    public ControlAudio CA;
 
  
     void Start() {
@@ -38,6 +39,7 @@ public class KeyPickUp : MonoBehaviour {
                 keyistrue.SetActive(true);
                 Destroy(gameObject);
                 textollave.gameObject.SetActive(false);
+                CA.Found();
  
                 // Intenta añadir el objeto al inventario
                 bool added = inventory.AddItem(gameObject);

@@ -11,8 +11,10 @@ public class ControlAudio : MonoBehaviour
     public AudioSource wnch;
     AudioSource source;
     public AudioClip[] sounds;
+    public AudioClip[] Encontrar;
    
     public float volumen;
+    public float volumen2;
     public float TimerAudio;
 
     // Start is called before the first frame update
@@ -61,7 +63,13 @@ public class ControlAudio : MonoBehaviour
          */
         source.PlayOneShot(sounds[r], volumen);
     }
-    
+    public void Found()
+    {
+        int r = UnityEngine.Random.Range(0, sounds.Length);
+        source.PlayOneShot(Encontrar[r], volumen2);
+        Debug.Log("AudioReproducido");
+    }
+
 
     public void ObtenerAudioSource()
     {

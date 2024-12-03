@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
@@ -29,6 +30,7 @@ namespace StarterAssets
 		public GameObject Wnch;
 
         AudioSource source;
+		public AudioSource RW;
 		public ControlAudio ca;
         public AudioClip[] sounds;
 
@@ -450,7 +452,7 @@ namespace StarterAssets
         {
           if(collision.gameObject.CompareTag("Inicio Audio"))
 			{
-				ca.IncioAudio();
+				StartCoroutine(IAUDIO());
 				Destroy(IAudio);
 			}
 
@@ -466,6 +468,14 @@ namespace StarterAssets
                 Destroy(Wnch);
             }
         }
+
+
+		IEnumerator IAUDIO()
+		{
+            ca.IncioAudio();
+            yield return new WaitForSeconds(3f);
+			RW.Play();
+		}
     }
 
 }
