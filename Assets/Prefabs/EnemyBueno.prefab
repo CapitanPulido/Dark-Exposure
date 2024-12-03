@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655588344698083887}
-  - component: {fileID: 8272163785780403673}
+  - component: {fileID: 7958433079445753559}
   m_Layer: 0
   m_Name: Radio
   m_TagString: EnemyRadio
@@ -32,8 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 938850644680578161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8272163785780403673
-SphereCollider:
+--- !u!65 &7958433079445753559
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -47,12 +47,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.8215683, y: 0.8521018, z: 2.883128}
+  m_Center: {x: 0.029481187, y: -0.07394894, z: 0.030031994}
 --- !u!1 &8439891617385704446
 GameObject:
   m_ObjectHideFlags: 0

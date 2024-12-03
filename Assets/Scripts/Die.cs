@@ -35,10 +35,11 @@ public class Die : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Invoke("Died", 3);
+            CA.SFXMuerte();
+            Invoke("Died", 0);
             Blood.SetActive(true);
 
-            CA.SFXMuerte();
+            
 
             Debug.Log("Moriste");
         }
@@ -50,7 +51,7 @@ public class Die : MonoBehaviour
         
     }
 
-    IEnumerator Muerte()
+    public IEnumerator Muerte()
     {
         muerte.gameObject.SetActive(true);  
         yield return new WaitForSeconds(1);
