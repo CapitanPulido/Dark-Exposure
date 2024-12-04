@@ -183,7 +183,7 @@ namespace StarterAssets
             if (Input.GetKey(KeyCode.Mouse1))
             {
 				timer += Time.deltaTime;
-				if (timer >= 1 && !CamChanged)
+				if (timer >= 0 && !CamChanged)
 				{
 					CamChanged = true;
 					ChangeCamera();
