@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2795704222089547560}
   - component: {fileID: 6723983740948389637}
   - component: {fileID: 2502717720357794887}
+  - component: {fileID: 3635342684181401949}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Untagged
@@ -105,6 +106,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010000004, y: 0.010000024, z: 0.010000003}
   m_Center: {x: -1.0682703e-33, y: -2.328307e-10, z: 0.0000009536743}
+--- !u!208 &3635342684181401949
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920878277458447276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.0050000004, y: 0.0050000004, z: 0.0050000004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6494138133467344250
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +167,7 @@ GameObject:
   - component: {fileID: 8258653993131580977}
   - component: {fileID: 7407574977296082580}
   - component: {fileID: 6571575571979630789}
+  - component: {fileID: 8654594184955913813}
   m_Layer: 0
   m_Name: Foco1
   m_TagString: Untagged
@@ -222,6 +240,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &8654594184955913813
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8075591028986104088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8706989623943768187
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +267,7 @@ GameObject:
   - component: {fileID: 4288595584859948838}
   - component: {fileID: 3818805295497868141}
   - component: {fileID: 7472680571615874077}
+  - component: {fileID: 6334347122816632725}
   m_Layer: 0
   m_Name: Foco
   m_TagString: Untagged
@@ -305,3 +340,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &6334347122816632725
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706989623943768187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

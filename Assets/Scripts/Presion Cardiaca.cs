@@ -30,6 +30,7 @@ public class PresionCardiaca : MonoBehaviour
     public Die died;
 
     AudioSource Hearth;
+    
 
     void Start()
     {
