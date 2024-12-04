@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
                 {
                     MoveToRandomPoint();
                     waitTimer = waitTime;
-                    agent.speed = 10f;
+                    agent.speed = 3f;
                 }
                 else
                 {
@@ -125,14 +125,14 @@ public class Enemy : MonoBehaviour
             Caminar.SetActive(false);
         }
 
-        if (agent.speed > 0f  && agent.speed <= 10)
+        if (agent.speed > 0f  && agent.speed <= 5)
         {
             Idle.SetActive(false);
             Correr.SetActive(false);
             Caminar.SetActive(true);
         }
 
-        if(agent.speed > 10)
+        if(agent.speed > 5)
         {
             Idle.SetActive(false);
             Correr.SetActive(true);
@@ -165,7 +165,7 @@ public class Enemy : MonoBehaviour
     {
         isChasingPlayer = true;
         agent.SetDestination(player.position);
-        agent.speed = 15;
+        agent.speed = 10;
     }
 
     private void OnTriggerEnter(Collider collision)

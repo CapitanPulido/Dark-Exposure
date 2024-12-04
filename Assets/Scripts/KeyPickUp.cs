@@ -37,7 +37,7 @@ public class KeyPickUp : MonoBehaviour {
         if (isplayer) {
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
                 keyistrue.SetActive(true);
-                Destroy(gameObject);
+                Invoke("Destroy1", 1);
                 textollave.gameObject.SetActive(false);
                 CA.Found();
  
@@ -64,4 +64,8 @@ public class KeyPickUp : MonoBehaviour {
         textollave.gameObject.SetActive(false);
     }
     
+    public void Destroy1()
+    {
+        Destroy(gameObject);
+    }
 }

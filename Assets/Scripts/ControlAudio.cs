@@ -34,7 +34,7 @@ public class ControlAudio : MonoBehaviour
         //    Musica();
         //}
         TimerAudio += Time.deltaTime;
-        if (TimerAudio > 300)
+        if (TimerAudio > 120)
         {
             TimerAudio = 0;
             Musica();
