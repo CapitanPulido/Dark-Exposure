@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Unity.VisualScripting.Member;
 
 [RequireComponent(typeof(AudioSource))]
 public class PresionCardiaca : MonoBehaviour
@@ -16,7 +15,7 @@ public class PresionCardiaca : MonoBehaviour
     public float relax;
     public Slider press;
   
-
+    public GameManager manager;
     FirstPersonController Controller;
     public Canvas PressureCanvas;
     public RawImage PressureBlood;
@@ -91,10 +90,10 @@ public class PresionCardiaca : MonoBehaviour
 
         ActualPressure = Mathf.Clamp(ActualPressure, MinPressure, MaxPressure);
 
-        if (ActualPressure >= 250)
+        if (ActualPressure >= 120)
         {
 
-            died.Died();
+            manager.StartCoroutine("Muerte");
         }
 
         if (ActualPressure <=10 )
@@ -106,12 +105,7 @@ public class PresionCardiaca : MonoBehaviour
         {
             volumen = 2;
         }
-       
-
-        if (ActualPressure == MaxPressure)
-        {
-            died.Died();
-        }
+      
 
         
     }

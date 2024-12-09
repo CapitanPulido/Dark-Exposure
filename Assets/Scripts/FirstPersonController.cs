@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
-#endif
+using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
 	[RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
     [RequireComponent(typeof(AudioSource))]
-#endif
+
     public class FirstPersonController : MonoBehaviour
 	{
         public float energiaActual;

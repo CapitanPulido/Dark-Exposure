@@ -25,7 +25,7 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         Pause.SetActive(true);
-        Players.SetActive(false);
+        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 

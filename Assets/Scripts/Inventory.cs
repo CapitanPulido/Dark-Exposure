@@ -14,8 +14,8 @@ public class Inventory : MonoBehaviour
     private GameObject equippedItem; // Objeto actualmente en la mano
     private GameObject selectedItem; // Objeto seleccionado en el inventario
 
-    public Button equipButton; // Referencia al botón de equipar
-    public Button dropButton; // Referencia al botón de soltar
+    //public Button equipButton; // Referencia al botón de equipar
+    //public Button dropButton; // Referencia al botón de soltar
     public Canvas canvas;
 
     private void Start()
@@ -23,11 +23,10 @@ public class Inventory : MonoBehaviour
         items = new List<GameObject>(maxSlots);
         
         canvas.enabled = false;
-        equipButton.gameObject.SetActive(false);
-        dropButton.gameObject.SetActive(false);
+        
 
-        equipButton.onClick.AddListener(EquipSelectedItem);
-        dropButton.onClick.AddListener(DropSelectedItem);
+        //equipButton.onClick.AddListener(EquipSelectedItem);
+        //dropButton.onClick.AddListener(DropSelectedItem);
     }
 
     private void Update()
@@ -46,11 +45,11 @@ public class Inventory : MonoBehaviour
             Cursor.visible = false;
         }
 
-        // Detecta clic en un slot del inventario
-        if (canvas.enabled && Input.GetMouseButtonDown(0))
-        {
-            CheckInventoryClick();
-        }
+        //// Detecta clic en un slot del inventario
+        //if (canvas.enabled && Input.GetMouseButtonDown(0))
+        //{
+        //    CheckInventoryClick();
+        //}
 
         // Soltar el objeto equipado al presionar "G"
         if (equippedItem != null && Input.GetKeyDown(KeyCode.G))
@@ -124,30 +123,30 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void CheckInventoryClick()
-    {
-        // Detecta el objeto sobre el cual se hizo clic
-        for (int i = 0; i < inventorySlots.Count; i++)
-        {
-            if (RectTransformUtility.RectangleContainsScreenPoint(inventorySlots[i].rectTransform, Input.mousePosition))
-            {
-                if (items.Count > i)
-                {
-                    selectedItem = items[i]; // Obtén el objeto seleccionado
-                    equipButton.gameObject.SetActive(true); // Activa el botón de equipar
-                    dropButton.gameObject.SetActive(true); // Activa el botón de soltar
-                    break;
-                }
-            }
-        }
-    }
+    //private void CheckInventoryClick()
+    //{
+    //    // Detecta el objeto sobre el cual se hizo clic
+    //    for (int i = 0; i < inventorySlots.Count; i++)
+    //    {
+    //        if (RectTransformUtility.RectangleContainsScreenPoint(inventorySlots[i].rectTransform, Input.mousePosition))
+    //        {
+    //            if (items.Count > i)
+    //            {
+    //                selectedItem = items[i]; // Obtén el objeto seleccionado
+    //                equipButton.gameObject.SetActive(true); // Activa el botón de equipar
+    //                dropButton.gameObject.SetActive(true); // Activa el botón de soltar
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
 
     public void EquipSelectedItem()
     {
         if (selectedItem != null)
         {
             EquipItem(selectedItem);
-            ClearSelection();
+            //ClearSelection();
         }
     }
 
@@ -157,16 +156,16 @@ public class Inventory : MonoBehaviour
         {
             DropEquippedItem();
             RemoveItem(selectedItem);
-            ClearSelection();
+            //ClearSelection();
         }
     }
 
-    private void ClearSelection()
-    {
-        selectedItem = null; // Limpia la selección
-        equipButton.gameObject.SetActive(false); // Desactiva el botón de equipar
-        dropButton.gameObject.SetActive(false); // Desactiva el botón de soltar
-    }
+    //private void ClearSelection()
+    //{
+    //    selectedItem = null; // Limpia la selección
+    //    equipButton.gameObject.SetActive(false); // Desactiva el botón de equipar
+    //    dropButton.gameObject.SetActive(false); // Desactiva el botón de soltar
+    //}
 
     private void DropEquippedItem()
     {

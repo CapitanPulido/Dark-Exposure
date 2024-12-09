@@ -9,10 +9,10 @@ public class ControlAudio : MonoBehaviour
     public AudioSource IAudio;
     public AudioSource Surrar;
     public AudioSource wnch;
-    AudioSource source;
+    public AudioSource source;
     public AudioClip[] sounds;
     public AudioClip[] Encontrar;
-   
+
     public float volumen;
     public float volumen2;
     public float TimerAudio;
@@ -29,15 +29,16 @@ public class ControlAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (!source.isPlaying)
-        //{
-        //    Musica();
-        //}
         TimerAudio += Time.deltaTime;
         if (TimerAudio > 120)
         {
             TimerAudio = 0;
             Musica();
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Found();
         }
     }
 
@@ -56,11 +57,6 @@ public class ControlAudio : MonoBehaviour
     public void Musica()
     {
         int r = UnityEngine.Random.Range(0, sounds.Length);
-        //if aux == r
-        /*
-         * regenero random
-         * 
-         */
         source.PlayOneShot(sounds[r], volumen);
     }
     public void Found()
@@ -101,4 +97,10 @@ public class ControlAudio : MonoBehaviour
     {
         wnch.Play();
     }
+
+    public void Encontro()
+    {
+        Found();
+    }
+
 }

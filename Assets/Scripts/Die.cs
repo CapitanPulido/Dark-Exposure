@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Die : MonoBehaviour
 {
 
-   
-    public GameObject firstPerson;
+
+    public GameObject firstPerson, Players;
     public GameObject Blood;
     public Canvas muerte;
     
@@ -32,17 +33,13 @@ public class Die : MonoBehaviour
         {
             
             Invoke("Died", 0);
-            
-
-            
-
             Debug.Log("Moriste");
         }
     }
 
     public void Died()
     {
-        Destroy(firstPerson);
+        
         StartCoroutine(Muerte());
         
     }
@@ -52,6 +49,7 @@ public class Die : MonoBehaviour
         Blood.SetActive(true);
 
         yield return new WaitForSeconds(2);
+        Players.SetActive(false);
         Debug.Log("Cambio");
         SceneManager.LoadScene("Muerte");
     }
