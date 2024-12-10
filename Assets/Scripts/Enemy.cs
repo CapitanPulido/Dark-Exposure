@@ -89,10 +89,11 @@ public class Enemy : MonoBehaviour
             Musica();
         }
 
+        // Asegúrate de que el objeto mire en la dirección de movimiento
+        RotateTowardsMovementDirection();
+
         if (player != null && Vector3.Distance(transform.position, player.position) <= detectionRadius)
         {
-
-
 
         }
         else
@@ -176,6 +177,22 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit(Collider collision)
     {
         Collist.Remove(collision);
+    }
+
+    void RotateTowardsMovementDirection()
+    {
+        // Si el agente está moviéndose
+        if (agent.velocity.sqrMagnitude > 0.01f)
+        {
+            // Obtén la dirección del movimiento
+            Vector3 direction = agent.velocity.normalized;
+
+            // Calcula la rotación necesaria para mirar en esa dirección
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+            // Aplica la rotación suavemente
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * agent.angularSpeed);
+        }
     }
 }
 
