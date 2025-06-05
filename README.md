@@ -20,3 +20,4 @@ Dark exposure es un video juego del genero de terror estilo semirealista 3D dond
 
 1. Clona el repositorio:
 ```bash
+https://github.com/CapitanPulido/Shadows/tree/a28bb63546298d3e5cbb099ca45a061ee11f4c70
