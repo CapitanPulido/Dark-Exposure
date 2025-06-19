@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: f53f5fc499d31e44b9deee84d28a9ee8, type: 3}
+  script: {instanceID: 0}
   rootGameObjectId: 
   rootGameObjectName: 
   importerVersion: 1
@@ -30,9 +30,9 @@ ScriptedImporter:
     importCurves: 1
     createCurveRenderers: 0
   abcStartTime: 0
-  abcEndTime: 1.625
-  startTime: 0
-  endTime: 1.625
+  abcEndTime: 0
+  startTime: -1.7976931348623157e+308
+  endTime: 1.7976931348623157e+308
   importWarning: 
-  firstImport: 0
+  firstImport: 1
   isHDF5: 0
