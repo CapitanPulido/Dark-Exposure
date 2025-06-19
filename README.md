@@ -16,6 +16,18 @@ Dark exposure es un video juego del genero de terror estilo semirealista 3D dond
 - MAYA
 - After Effects
 
+## Capturas de pantalla
+
+<p align="center">
+  <img src="./Assets/GitHub/MP.png" width="400"/>
+  <img src="./Assets/GitHub/GAME.png" width="400"/>
+  <img src="./Assets/GitHub/SC.png" width="400"/>
+  <img src="./Assets/GitHub/MD.png" width="400"/>
+  <img src="./Assets/GitHub/INTRO.gif" width="1200"/>
+  <img src="./Assets/GitHub/OUTRO.gif" width="1200"/>
+  
+</p>
+
 ##  Cómo ejecutar el proyecto
 
 1. Clona el repositorio:
